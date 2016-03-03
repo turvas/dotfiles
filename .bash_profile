@@ -1,5 +1,24 @@
 PS1='\n\e[0;32m\]\u@\h:\w\n$ \[\e[m\]'
 
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# Save multi-line commands as one command
+shopt -s cmdhist
+
+# Record each line as it gets issued
+PROMPT_COMMAND='history -a'
+
+# Huge history. Doesn't appear to slow things down, so why not?
+HISTSIZE=500000
+HISTFILESIZE=100000
+
+# Don't record some commands
+export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
+
+# Useful timestamp format
+HISTTIMEFORMAT='%F %T '
+
 alias grep='grep --color=auto'
 alias l='ls -lhaFG'
 alias ll='ls -lhaFrtG'
