@@ -31,8 +31,15 @@ brew install Caskroom/cask/rstudio
 brew linkapps
 brew doctor
 
-# PIP
-sudo easy_install pip
+# PIP - Unnecessary due to "brew install python"
+# sudo easy_install pip
+
+# Vim Pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd ~/.vim/bundle
+git clone https://github.com/scrooloose/nerdcommenter.git
+git clone https://github.com/scrooloose/nerdtree.git
 
 # Configs for bash, vim, git
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.bash_profile -O ~/.bash_profile

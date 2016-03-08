@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set showmatch
 set tabstop=4
 set shiftwidth=4
