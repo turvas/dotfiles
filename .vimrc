@@ -21,6 +21,7 @@ set ignorecase
 set smartcase
 set history=1000
 
-nmap \| :NERDTreeFind<CR
+nmap \| :NERDTreeFind<CR>
 nmap <Bslash> :NERDTreeToggle<CR>
-map <leader>/   <plug>NERDCommenterToggle
+nmap ,/ <plug>NERDCommenterToggle
+vmap ,/ <plug>NERDCommenterToggle
