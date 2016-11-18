@@ -1,6 +1,6 @@
 The dotfiles in this repo should work with bash on any platform.  The commands below are specific to setting up a new instance of OSX.
 
-```
+```bash
 # Set new hostname
 sudo scutil --set HostName [new hostname]
 
@@ -23,8 +23,7 @@ brew cask install sequel-pro
 brew cask install google-chrome
 brew cask install shiftit
 brew cask install menumeters
-brew install grails
-brew install groovy
+brew cask install textmate
 brew tap homebrew/science
 brew install r
 brew install Caskroom/cask/rstudio
