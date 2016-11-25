@@ -29,6 +29,7 @@ brew cask install google-chrome
 brew cask install shiftit
 brew cask install menumeters
 brew cask install textmate
+brew cask install grandperspective
 brew tap homebrew/science
 brew install r
 brew install Caskroom/cask/rstudio
