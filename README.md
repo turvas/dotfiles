@@ -18,6 +18,11 @@ brew install python3
 brew install node
 brew tap caskroom/cask
 brew install brew-cask
+brew cask install iterm2
+brew cask install vlc
+brew cask instal sonos
+brew cask install spotify
+brew cask install steam
 brew cask install java
 brew cask install sequel-pro
 brew cask install google-chrome
@@ -50,7 +55,20 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 # Display full path and all files in Finder
 defaults write com.apple.finder AppleShowAllFiles -boolean true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+
+#Store screenshots in subfolder on desktop
+mkdir ~/Desktop/Screenshots
+defaults write com.apple.screencapture location ~/Desktop/Screenshots
 killall Finder
+
+#Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 0.02
+
+#Set a shorter Delay until key repeat
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
+
+# Set hostname
+sudo scutil --set HostName steakknife
 
 # Install bash_it
 git clone https://github.com/revans/bash-it.git ~/.bash_it
