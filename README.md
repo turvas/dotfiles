@@ -68,9 +68,6 @@ defaults write NSGlobalDomain KeyRepeat -int 0.02
 #Set a shorter Delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
-# Set hostname
-sudo scutil --set HostName steakknife
-
 # Install bash_it
 git clone https://github.com/revans/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh
