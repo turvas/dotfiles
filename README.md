@@ -6,33 +6,40 @@ sudo scutil --set HostName [new hostname]
 
 # Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 brew update
+
 brew install wget
 brew install tree
 brew install ag
-brew install macvim
-brew install chromedriver
 brew install ruby
 brew install python
 brew install python3
 brew install node
+#brew install macvim
+#brew install chromedriver
+
+brew tap homebrew/science
+brew install r
+brew install Caskroom/cask/rstudio
+
 brew tap caskroom/cask
 brew install brew-cask
+
 brew cask install iterm2
 brew cask install vlc
 brew cask instal sonos
 brew cask install spotify
 brew cask install steam
 brew cask install java
-brew cask install sequel-pro
 brew cask install google-chrome
 brew cask install shiftit
 brew cask install menumeters
 brew cask install textmate
 brew cask install grandperspective
-brew tap homebrew/science
-brew install r
-brew install Caskroom/cask/rstudio
+brew cask install sloth
+brew cask install sequel-pro
+
 brew linkapps
 brew doctor
 
