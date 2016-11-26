@@ -84,7 +84,6 @@ cat ~/.bash_profile >> ~/.bash_it/aliases/enabled/general.aliases.bash
 mkdir ~/workspace
 
 # Other Stuff
-http://sveinbjorn.org/files/software/sloth.zip
 https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip
 http://www.dejal.com/timeout/
 http://www.bitgapp.com/eqmac/
