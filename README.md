@@ -43,6 +43,8 @@ brew cask install sequel-pro
 brew linkapps
 brew doctor
 
+sudo gem install cocoapods
+
 # PIP - Unnecessary due to "brew install python"
 # sudo easy_install pip
 
