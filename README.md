@@ -43,7 +43,12 @@ brew cask install sequel-pro
 brew linkapps
 brew doctor
 
+# XCode
 sudo gem install cocoapods
+mkdir ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_12.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_12.dvtcolortheme
+wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_13.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_13.dvtcolortheme
+wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_14.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_14.dvtcolortheme
 
 # PIP - Unnecessary due to "brew install python"
 # sudo easy_install pip
