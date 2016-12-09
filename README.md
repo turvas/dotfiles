@@ -8,41 +8,47 @@ sudo scutil --set HostName [new hostname]
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew update
-
-brew install wget
-brew install tree
-brew install ag
-brew install ruby
-brew install python
-brew install python3
-brew install node
-#brew install macvim
-#brew install chromedriver
-
 brew tap homebrew/science
-brew install r
-brew install Caskroom/cask/rstudio
-
 brew tap caskroom/cask
 brew install brew-cask
 
-brew cask install slack
+brew install ag
+brew install node
+brew install python
+brew install python3
+brew install r
+brew install ruby
+brew install tree
+brew install wget
+
+brew cask install eqmac
+brew cask install google-chrome
+brew cask install grandperspective
 brew cask install iterm2
-brew cask install vlc
-brew cask instal sonos
+brew cask install java
+brew cask install menumeters
+brew cask install rstudio
+brew cask install shiftit
+brew cask install slack
+brew cask install sloth
+brew cask install sonos
 brew cask install spotify
 brew cask install steam
-brew cask install java
-brew cask install google-chrome
-brew cask install shiftit
-brew cask install menumeters
 brew cask install textmate
-brew cask install grandperspective
-brew cask install sloth
-#brew cask install sequel-pro
+brew cask install vlc
 
 brew linkapps
+brew cleanup
+brew cask cleanup
 brew doctor
+
+# Optional packages
+#brew install macvim
+#brew install chromedriver
+#brew cask install sequel-pro
+
+# PIP - Unnecessary due to "brew install python"
+#sudo easy_install pip
 
 # XCode
 sudo gem install cocoapods
@@ -50,9 +56,6 @@ mkdir ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_12.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_12.dvtcolortheme
 wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_13.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_13.dvtcolortheme
 wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_14.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_14.dvtcolortheme
-
-# PIP - Unnecessary due to "brew install python"
-# sudo easy_install pip
 
 # Vim Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -72,15 +75,15 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 defaults write com.apple.finder AppleShowAllFiles -boolean true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
-#Store screenshots in subfolder on desktop
+# Store screenshots in subfolder on desktop
 mkdir ~/Desktop/Screenshots
 defaults write com.apple.screencapture location ~/Desktop/Screenshots
 killall Finder
 
-#Set a blazingly fast keyboard repeat rate
+# Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0.02
 
-#Set a shorter Delay until key repeat
+# Set a shorter Delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
 # Install bash_it
@@ -88,12 +91,11 @@ git clone https://github.com/revans/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh
 cat ~/.bash_profile >> ~/.bash_it/aliases/enabled/general.aliases.bash
 
-# Make workspace
+# Create workspace directory
 mkdir ~/workspace
 
 # Other Stuff
-https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip
+https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip (Old version had better hotkeys)
 http://www.dejal.com/timeout/
-http://www.bitgapp.com/eqmac/
 http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/
 ```
