@@ -26,6 +26,7 @@ brew install Caskroom/cask/rstudio
 brew tap caskroom/cask
 brew install brew-cask
 
+brew cask install slack
 brew cask install iterm2
 brew cask install vlc
 brew cask instal sonos
@@ -38,7 +39,7 @@ brew cask install menumeters
 brew cask install textmate
 brew cask install grandperspective
 brew cask install sloth
-brew cask install sequel-pro
+#brew cask install sequel-pro
 
 brew linkapps
 brew doctor
