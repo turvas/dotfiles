@@ -22,6 +22,7 @@ brew install tree
 brew install wget
 
 brew cask install eqmac
+brew cask install flux
 brew cask install google-chrome
 brew cask install grandperspective
 brew cask install iterm2
