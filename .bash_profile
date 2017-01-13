@@ -82,7 +82,7 @@ function git_status_color {
     echo $COLOR_RED
   elif [[ $git_status =~ "Your branch is ahead of" ]]; then
     echo $COLOR_BLUE
-  elif [[ $git_status =~ "Your branch is behind" ]]; then
+  elif [[ $git_status =~ "Your branch is behind" ]] || [[ $git_status =~ "different commits each" ]]; then
     echo $COLOR_YELLOW
   elif [[ $git_status =~ "nothing to commit" ]]; then
     echo $COLOR_GREEN
