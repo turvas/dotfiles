@@ -10,5 +10,9 @@
 
 [core]
   pager = less -x4
+  editor = /usr/bin/vim
 [rerere]
   enabled = true
+[user]
+	email = mitochondrion@users.noreply.github.com
+	name = mitochondrion
