@@ -14,5 +14,5 @@
 [rerere]
   enabled = true
 [user]
-	email = mitochondrion@users.noreply.github.com
-	name = mitochondrion
+  email = mitochondrion@users.noreply.github.com
+  name = mitochondrion
