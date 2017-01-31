@@ -17,6 +17,7 @@ export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
 # Useful timestamp format
 HISTTIMEFORMAT='%F %T '
 
+# Aliases
 alias grep='grep --color=auto'
 alias l='ls -lhaFG'
 alias ll='ls -lhaFrtG'
@@ -25,6 +26,7 @@ alias gh='history | grep -i $1'
 alias psef='ps -ef | head -1;  ps -ef | grep -v grep | grep --color=auto -i $1'
 alias d='du -sch ./*'
 alias f='find . -iname $1'
+alias weather='curl wttr.in/nyc'
 
 # LINUX
 # alias l='ls -lhaF --color=auto'
@@ -33,9 +35,6 @@ alias f='find . -iname $1'
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
-
-# Mac specific aliases
-alias aliases='vim ~/.bash_it/aliases/enabled/general.aliases.bash'
 
 if [[ $- == *i* ]]
 then
