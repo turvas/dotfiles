@@ -26,6 +26,7 @@ alias gh='history | grep -i $1'
 alias psef='ps -ef | head -1;  ps -ef | grep -v grep | grep --color=auto -i $1'
 alias d='du -sch ./*'
 alias f='find . -iname $1'
+alias ip='curl ifconfig.co'
 alias weather='curl wttr.in/nyc'
 
 # LINUX
