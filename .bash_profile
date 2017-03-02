@@ -29,6 +29,9 @@ alias f='find . -iname $1'
 alias ip='curl ifconfig.co'
 alias weather='curl wttr.in/nyc'
 
+# OSX
+alias off='pmset displaysleepnow'
+
 # LINUX
 # alias l='ls -lhaF --color=auto'
 # alias ll='ls -lhaFrtG --color=auto'
