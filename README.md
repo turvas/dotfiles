@@ -20,6 +20,7 @@ brew install r
 brew install ruby
 brew install tree
 brew install wget
+brew install httpie
 
 brew cask install eqmac
 brew cask install flux
