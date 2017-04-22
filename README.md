@@ -21,6 +21,8 @@ brew install ruby
 brew install tree
 brew install wget
 brew install httpie
+brew install unrar
+brew install unar
 
 brew cask install eqmac
 brew cask install flux
