@@ -103,4 +103,13 @@ https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip (Old version had bette
 http://www.dejal.com/timeout/
 http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/
 Wunderlist
+Slack
+Postman
+Charles Proxy
+
+# Chrome Plugins
+HTTPS Everywhere
+Privacy Badger
+Zhongwen Chinese Popup Dictionary
+Pocket
 ```
