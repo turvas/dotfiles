@@ -1,3 +1,6 @@
+# Default editor is vi which breaks things like crontab
+EDITOR=vim
+
 # Append to the history file, don't overwrite it
 shopt -s histappend
 
