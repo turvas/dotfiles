@@ -14,16 +14,17 @@ brew install brew-cask
 
 brew install ag
 brew install pv
-brew install node
-brew install python
-brew install python3
-brew install r
-brew install ruby
+brew install fortune
 brew install tree
 brew install wget
 brew install httpie
 brew install unrar
 brew install unar
+brew install node
+brew install python
+brew install python3
+brew install r
+brew install ruby
 
 brew cask install eqmac
 brew cask install flux
