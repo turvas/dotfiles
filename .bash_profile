@@ -1,6 +1,8 @@
 # Default editor is vi which breaks things like crontab
 EDITOR=vim
 
+export PATH=~/.local/bin:~/Library/Python/3.6/bin:$PATH
+
 # Append to the history file, don't overwrite it
 shopt -s histappend
 
