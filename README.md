@@ -55,6 +55,11 @@ brew doctor
 
 # PIP - Unnecessary due to "brew install python"
 #sudo easy_install pip
+pip3 install --user --upgrade awscli
+pip3 install requests
+pip install requests
+pip3 install pylint
+pip install pylint
 
 # XCode
 sudo gem install cocoapods
