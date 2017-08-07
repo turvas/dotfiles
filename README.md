@@ -80,6 +80,7 @@ git clone https://github.com/scrooloose/syntastic
 git clone https://github.com/ryanss/vim-hackernews
 git clone https://github.com/bronson/vim-trailing-whitespace
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
+git clone https://github.com/ervandew/supertab
 
 # Configs for bash, vim, git
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.bash_profile -O ~/.bash_profile
