@@ -12,6 +12,7 @@ brew tap homebrew/science
 brew tap caskroom/cask
 brew install brew-cask
 
+brew install gcc
 brew install ag
 brew install pv
 brew install fortune
