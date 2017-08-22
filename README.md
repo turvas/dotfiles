@@ -25,6 +25,7 @@ brew install python
 brew install python3
 brew install r
 brew install ruby
+brew install postgres
 
 brew cask install eqmac
 brew cask install flux
@@ -60,6 +61,22 @@ pip3 install requests
 pip install requests
 pip3 install pylint
 pip install pylint
+pip install numpy
+pip3 install numpy
+pip install ipython
+pip3 install ipython
+pip install jupyter
+pip3 install jupyter
+pip install pandas
+pip3 install pandas
+
+brew install gfortran
+pip install scipy
+pip3 install scipy
+
+brew install pkg-config
+pip install matplotlib
+pip3 install matplotlib
 
 # XCode
 sudo gem install cocoapods
