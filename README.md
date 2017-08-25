@@ -10,7 +10,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew update
 brew tap homebrew/science
 brew tap caskroom/cask
-brew install brew-cask
 
 brew install gcc
 brew install ag
