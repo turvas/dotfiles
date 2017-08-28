@@ -49,6 +49,8 @@ brew cleanup
 brew cask cleanup
 brew doctor
 
+npm install -g vtop
+
 # Optional packages
 #brew install macvim
 #brew install chromedriver
