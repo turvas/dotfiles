@@ -9,14 +9,16 @@ export HISTCONTROL=ignoredups:erasedups
 # big big history
 export HISTSIZE=100000
 export HISTFILESIZE=100000
-# append to history, don't overwrite it
-shopt -s histappend
 # Don't record some commands
 export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # Useful timestamp format
 HISTTIMEFORMAT='%F %T '
+# append to history, don't overwrite it
+shopt -s histappend
+# Save multi-line commands as one command
+shopt -s cmdhist
 
 ### ALIASES ###
 alias grep='grep --color=auto'
