@@ -3,26 +3,22 @@ EDITOR=vim
 
 export PATH=~/.local/bin:~/Library/Python/3.6/bin:$PATH
 
-# Append to the history file, don't overwrite it
+### HISTORY ###
+# no duplicate entries
+export HISTCONTROL=ignoredups:erasedups
+# big big history
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+# append to history, don't overwrite it
 shopt -s histappend
-
-# Save multi-line commands as one command
-shopt -s cmdhist
-
-# Record each line as it gets issued
-PROMPT_COMMAND='history -a'
-
-# Huge history. Doesn't appear to slow things down, so why not?
-HISTSIZE=500000
-HISTFILESIZE=100000
-
 # Don't record some commands
 export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
-
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # Useful timestamp format
 HISTTIMEFORMAT='%F %T '
 
-# Aliases
+### ALIASES ###
 alias grep='grep --color=auto'
 alias l='ls -lhaFG'
 alias ll='ls -lhaFrtG'
@@ -33,18 +29,18 @@ alias d='du -sch ./*'
 alias f='find . -iname $1'
 alias ip='curl ifconfig.co'
 alias weather='curl wttr.in/nyc'
-
 # OSX
 alias off='pmset displaysleepnow'
-
 # LINUX
 # alias l='ls -lhaF --color=auto'
 # alias ll='ls -lhaFrtG --color=auto'
 
+### GIT COMPLETION ###
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+### HISTORY PARTIAL COMPLETION ###
 if [[ $- == *i* ]]
 then
     bind '"\e[A": history-search-backward'
@@ -53,6 +49,7 @@ then
     bind "set show-all-if-ambiguous on"
 fi
 
+### EXPLAINSHELL $$$
 # Open a command in http://explainshell.com/: explain [command]
 # From: https://github.com/schneems/explain_shell
 function explain {
@@ -73,7 +70,7 @@ function explain {
   open $url
 }
 
-# GIT PROMPT
+### 1337 PS1 PROMPT ###
 COLOR_CYAN="\[\033[0;36m\]"
 COLOR_RED="\[\033[0;31m\]"
 COLOR_YELLOW="\[\033[0;33m\]"
