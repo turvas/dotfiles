@@ -1,6 +1,7 @@
 execute pathogen#infect()
 
 set showmatch
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set ruler
