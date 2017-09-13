@@ -123,11 +123,6 @@ defaults write NSGlobalDomain KeyRepeat -int 0.02
 # Set a shorter Delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
-# Install bash_it
-git clone https://github.com/revans/bash-it.git ~/.bash_it
-~/.bash_it/install.sh
-cat ~/.bash_profile >> ~/.bash_it/aliases/enabled/general.aliases.bash
-
 # Create workspace directory
 mkdir ~/workspace
 
