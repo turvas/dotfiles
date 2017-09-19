@@ -26,6 +26,7 @@ brew install python3
 brew install r
 brew install ruby
 brew install postgres
+brew install findutils
 
 brew cask install eqmac
 brew cask install flux
