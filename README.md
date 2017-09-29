@@ -31,6 +31,7 @@ brew install findutils
 brew cask install eqmac
 brew cask install flux
 brew cask install google-chrome
+brew cask install firefox
 brew cask install grandperspective
 brew cask install iterm2
 brew cask install java
