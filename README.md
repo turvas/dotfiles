@@ -139,6 +139,9 @@ Charles Proxy
 # Chrome Plugins
 HTTPS Everywhere
 Privacy Badger
+JSON Viewer
 Zhongwen Chinese Popup Dictionary
 Pocket
+The Great Suspender
+appear.in
 ```
