@@ -12,9 +12,9 @@ brew tap homebrew/science
 brew tap caskroom/cask
 
 brew install gcc
+brew install ctags
 brew install ag
 brew install pv
-brew install fortune
 brew install tree
 brew install wget
 brew install httpie
@@ -27,6 +27,7 @@ brew install r
 brew install ruby
 brew install postgres
 brew install findutils
+brew install fortune
 
 brew cask install eqmac
 brew cask install flux
