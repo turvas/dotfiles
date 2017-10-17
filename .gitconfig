@@ -7,7 +7,7 @@
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
   l = log --graph --decorate --pretty=oneline --abbrev-commit
   la = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
-  ign = ls-files -o -i --exclude-standard
+  ignored = ls-files -o -i --exclude-standard
   set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
   lf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   ltag = describe --tags --abbrev=0
@@ -16,6 +16,8 @@
   editor = /usr/bin/vim
 [rerere]
   enabled = true
+[remote "origin"]
+  prune = true
 [user]
   email = mitochondrion@users.noreply.github.com
   name = mitochondrion
