@@ -31,6 +31,7 @@ alias d='du -sch ./*'
 alias f='find . -iname $1'
 alias ip='curl ifconfig.co'
 alias weather='curl wttr.in/nyc'
+alias tag='ctags -R --exclude=.git -exclude=log -exclude=logs'
 # OSX
 alias off='pmset displaysleepnow'
 # LINUX
