@@ -1,4 +1,7 @@
 [alias]
+  dif = diff
+  dc = diff --cached
+  fp = fetch -p
   st = status
   ss = status -s
   co = checkout
@@ -8,6 +11,7 @@
   l = log --graph --decorate --pretty=oneline --abbrev-commit
   la = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
   ignored = ls-files -o -i --exclude-standard
+  sub = submodule
   set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
   lf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   ltag = describe --tags --abbrev=0
