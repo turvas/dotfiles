@@ -2,6 +2,7 @@
   dif = diff
   dc = diff --cached
   fp = fetch -p
+  pr = pull -r
   st = status
   ss = status -s
   co = checkout
