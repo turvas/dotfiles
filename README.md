@@ -28,6 +28,7 @@ brew install ruby
 brew install postgres
 brew install findutils
 brew install fortune
+brew install sox # play -n synth 5 sine 440
 
 brew cask install eqmac
 brew cask install flux
