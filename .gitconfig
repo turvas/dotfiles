@@ -20,6 +20,7 @@
 [core]
   pager = less -x4
   editor = /usr/bin/vim
+  excludesfile = ~/.gitignore
 [rerere]
   enabled = true
 [remote "origin"]
