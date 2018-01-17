@@ -29,6 +29,7 @@ brew install postgres
 brew install findutils
 brew install fortune
 brew install sox # play -n synth 5 sine 440
+brew install ffmpeg
 
 brew cask install eqmac
 brew cask install flux
