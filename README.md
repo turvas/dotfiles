@@ -49,6 +49,7 @@ brew cask install spotify
 brew cask install steam
 brew cask install textmate
 brew cask install vlc
+brew cask install menubar-countdown
 
 brew linkapps
 brew cleanup
