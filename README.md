@@ -27,7 +27,6 @@ brew install r
 brew install ruby
 brew install postgres
 brew install findutils
-brew install ngrok
 brew install fortune
 brew install sox # play -n synth 5 sine 440
 brew install ffmpeg
@@ -50,6 +49,7 @@ brew cask install spotify
 brew cask install steam
 brew cask install textmate
 brew cask install vlc
+brew cask install ngrok
 brew cask install menubar-countdown
 
 brew linkapps
