@@ -27,6 +27,7 @@ brew install r
 brew install ruby
 brew install postgres
 brew install findutils
+brew install ngrok
 brew install fortune
 brew install sox # play -n synth 5 sine 440
 brew install ffmpeg
