@@ -51,6 +51,7 @@ brew cask install textmate
 brew cask install vlc
 brew cask install ngrok
 brew cask install menubar-countdown
+brew cask install accessmenubarapps
 
 brew linkapps
 brew cleanup
