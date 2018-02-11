@@ -31,6 +31,10 @@ brew install fortune
 brew install sox # play -n synth 5 sine 440
 brew install ffmpeg
 brew install heroku/brew/heroku
+brew install chromedriver
+brew install phantomjs
+brew install macvim
+brew install docker docker-compose
 
 brew cask install eqmac
 brew cask install flux
@@ -52,6 +56,7 @@ brew cask install vlc
 brew cask install ngrok
 brew cask install menubar-countdown
 brew cask install accessmenubarapps
+brew cask install imagej
 
 brew linkapps
 brew cleanup
@@ -61,9 +66,7 @@ brew doctor
 npm install -g vtop
 
 # Optional packages
-#brew install macvim
-#brew install chromedriver
-#brew cask install sequel-pro
+# brew cask install sequel-pro
 
 # PIP - Unnecessary due to "brew install python"
 #sudo easy_install pip
