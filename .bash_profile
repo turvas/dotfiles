@@ -3,6 +3,12 @@ EDITOR=vim
 
 export PATH=~/.local/bin:~/Library/Python/3.6/bin:$PATH
 
+# Change default ls directory color to be readable on dark background
+# (OSX)
+export LSCOLORS='Exfxcxdxbxegedabagacad'
+# (LINUX)
+export LS_COLORS=$LS_COLORS:'di=0;35:'
+
 ### HISTORY ###
 # no duplicate entries
 export HISTCONTROL=ignoredups:erasedups
