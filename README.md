@@ -16,6 +16,7 @@ brew install ctags
 brew install ag
 brew install pv
 brew install tree
+brew install gawk
 brew install wget
 brew install httpie
 brew install unrar
