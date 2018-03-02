@@ -129,6 +129,7 @@ function set_bash_prompt {
   # path
   PS1+=" $COLOR_CYAN\w"
   PS1+="\n"
+  # git branch/status
   PS1+="$(colored_git_branch)"
   PS1+="🍕 $COLOR_RESET "
 }
