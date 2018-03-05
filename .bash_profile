@@ -61,7 +61,7 @@ then
     bind "set show-all-if-ambiguous on"
 fi
 
-### EXPLAINSHELL $$$
+### EXPLAINSHELL ###
 # Open a command in http://explainshell.com/: explain [command]
 # From: https://github.com/schneems/explain_shell
 function explain {
