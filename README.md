@@ -55,7 +55,6 @@ brew cask install iterm2
 brew cask install java
 brew cask install menumeters
 brew cask install rstudio
-# brew cask install shiftit # I prefer the old hotkeys: https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip
 brew cask install slack
 brew cask install sloth
 brew cask install spotify
@@ -70,6 +69,7 @@ brew cask install google-earth
 brew cask install chromecast
 brew cask install android-studio
 brew cask install intellij-idea
+# brew cask install shiftit # I prefer the old hotkeys: https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip
 
 # Defunct?
 # brew cask install sonos
