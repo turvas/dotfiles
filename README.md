@@ -10,8 +10,10 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew update
 brew tap homebrew/science
 brew tap caskroom/cask
+brew tap caskroom/versions
 
-brew install gcc
+brew install gcc # Takes FOREVER (~1 hour)
+brew install git
 brew install ctags
 brew install ag
 brew install pv
@@ -26,30 +28,36 @@ brew install python
 brew install python3
 brew install r
 brew install ruby
+brew install go
+brew install kotlin
 brew install postgres
+brew install mysql
+brew install redis
 brew install findutils
 brew install fortune
 brew install sox # play -n synth 5 sine 440
 brew install ffmpeg
 brew install heroku/brew/heroku
 brew install chromedriver
-brew install phantomjs
 brew install macvim
 brew install docker docker-compose
+# brew install phantomjs # PhantomJs deprecated in favor of headless Chrome/Firefox
 
 brew cask install eqmac
 brew cask install flux
+brew cask install postman
+brew cask install charles
 brew cask install google-chrome
+brew cask install google-chrome-canary
 brew cask install firefox
 brew cask install grandperspective
 brew cask install iterm2
 brew cask install java
 brew cask install menumeters
 brew cask install rstudio
-brew cask install shiftit
+# brew cask install shiftit # I prefer the old hotkeys: https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip
 brew cask install slack
 brew cask install sloth
-brew cask install sonos
 brew cask install spotify
 brew cask install steam
 brew cask install textmate
@@ -58,19 +66,30 @@ brew cask install ngrok
 brew cask install menubar-countdown
 brew cask install accessmenubarapps
 brew cask install imagej
+brew cask install google-earth
+brew cask install chromecast
+brew cask install android-studio
+brew cask install intellij-idea
+
+# Defunct?
+# brew cask install sonos
 
 brew linkapps
 brew cleanup
 brew cask cleanup
 brew doctor
 
+# Search terminal output for “==> Caveats” for post-brew instructions
+
 npm install -g vtop
 
 # Optional packages
 # brew cask install sequel-pro
 
-# PIP - Unnecessary due to "brew install python"
-#sudo easy_install pip
+# PIP
+# sudo easy_install pip # Unnecessary due to "brew install python"
+pip3 install —upgrade pip setuptools wheel
+pip2 install —upgrade pip setuptools
 pip3 install --user --upgrade awscli
 pip3 install requests
 pip install requests
@@ -114,7 +133,7 @@ git clone https://github.com/bronson/vim-trailing-whitespace
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
 git clone https://github.com/ervandew/supertab
 
-# Set up Vim colors
+# Vim colors
 cd ~/.vim; mkdir colors; cd colors;
 git clone https://github.com/chriskempson/tomorrow-theme.git
 cp tomorrow-theme/vim/colors/*.vim .
@@ -149,9 +168,6 @@ https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip (Old version had bette
 http://www.dejal.com/timeout/
 http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/
 Wunderlist
-Slack
-Postman
-Charles Proxy
 
 # Chrome Plugins
 HTTPS Everywhere
