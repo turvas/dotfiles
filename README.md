@@ -163,18 +163,19 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 12
 # Create workspace directory
 mkdir ~/workspace
 
-# Other Stuff
-https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip (Old version had better hotkeys)
-http://www.dejal.com/timeout/
-http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/
-Wunderlist
+# === Other Stuff ===
+# https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip (Old version had better hotkeys)
+# http://www.dejal.com/timeout/
+# http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/
+# Wunderlist
 
-# Chrome Plugins
-HTTPS Everywhere
-Privacy Badger
-JSON Viewer
-Zhongwen Chinese Popup Dictionary
-Pocket
-The Great Suspender
-appear.in
+# === Chrome Plugins ===
+# HTTPS Everywhere
+# Privacy Badger
+# JSON Viewer
+# Zhongwen Chinese Popup Dictionary
+# Pocket
+# The Great Suspender
+# appear.in
+# repl.it
 ```
