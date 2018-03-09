@@ -114,6 +114,11 @@ git clone https://github.com/bronson/vim-trailing-whitespace
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
 git clone https://github.com/ervandew/supertab
 
+# Set up Vim colors
+cd ~/.vim; mkdir colors; cd colors;
+git clone https://github.com/chriskempson/tomorrow-theme.git
+cp tomorrow-theme/vim/colors/*.vim .
+
 # Configs for bash, vim, git
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.bash_profile -O ~/.bash_profile
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.vimrc -O ~/.vimrc
