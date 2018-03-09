@@ -15,12 +15,13 @@ highlight Cursor guibg=Green
 set bs=2
 set autoindent
 set number 
-colors Tomorrow-Night
 set laststatus=2
 set ruler
 set ignorecase
 set smartcase
 set history=1000
+
+colors Tomorrow-Night-Bright
 
 nmap \| :NERDTreeFind<CR>
 nmap <Bslash> :NERDTreeToggle<CR>
