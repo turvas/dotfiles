@@ -122,16 +122,16 @@ wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/Fon
 # Vim Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-cd ~/.vim/bundle
-git clone https://github.com/scrooloose/nerdcommenter.git
-git clone https://github.com/scrooloose/nerdtree.git
-git clone https://github.com/airblade/vim-gitgutter
-git clone https://github.com/mileszs/ack.vim.git
-git clone https://github.com/scrooloose/syntastic
-git clone https://github.com/ryanss/vim-hackernews
-git clone https://github.com/bronson/vim-trailing-whitespace
-git clone https://github.com/ctrlpvim/ctrlp.vim.git
-git clone https://github.com/ervandew/supertab
+git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
+git clone https://github.com/mileszs/ack.vim.git ~/.vim/bundle/ack.vim
+git clone https://github.com/scrooloose/syntastic ~/.vim/bundle/syntastic
+git clone https://github.com/bronson/vim-trailing-whitespace ~/.vim/bundle/vim-trailing-whitespace
+git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
+git clone https://github.com/ervandew/supertab ~/.vim/bundle/supertab
+git clone https://github.com/ntpeters/vim-better-whitespace.git ~/.vim/bundle/vim-better-whitespace
+
 
 # Vim colors
 cd ~/.vim; mkdir colors; cd colors;
