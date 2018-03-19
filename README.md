@@ -150,8 +150,8 @@ defaults write com.apple.finder AppleShowAllFiles -boolean true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
 # Store screenshots in subfolder on desktop
-mkdir ~/Desktop/Screenshots
-defaults write com.apple.screencapture location ~/Desktop/Screenshots
+mkdir ~/Documents/Screenshots
+defaults write com.apple.screencapture location ~/Documents/Screenshots
 killall Finder
 
 # Set a blazingly fast keyboard repeat rate
