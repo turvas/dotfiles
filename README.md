@@ -88,8 +88,8 @@ npm install -g vtop
 
 # PIP
 # sudo easy_install pip # Unnecessary due to "brew install python"
-pip3 install —upgrade pip setuptools wheel
-pip2 install —upgrade pip setuptools
+pip3 install --upgrade pip setuptools wheel
+pip2 install --upgrade pip setuptools
 pip3 install --user --upgrade awscli
 pip3 install requests
 pip install requests
