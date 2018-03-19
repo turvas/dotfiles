@@ -134,9 +134,9 @@ git clone https://github.com/ntpeters/vim-better-whitespace.git ~/.vim/bundle/vi
 
 
 # Vim colors
-cd ~/.vim; mkdir colors; cd colors;
-git clone https://github.com/chriskempson/tomorrow-theme.git
-cp tomorrow-theme/vim/colors/*.vim .
+mkdir ~/.vim/colors
+git clone https://github.com/chriskempson/tomorrow-theme.git ~/.vim/colors/tomorrow-theme
+cp ~/.vim/colors/tomorrow-theme/vim/colors/*.vim ~/.vim/colors/
 
 # Configs for bash, vim, git
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.bash_profile -O ~/.bash_profile
