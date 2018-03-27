@@ -14,7 +14,7 @@ highlight Normal guibg=grey80
 highlight Cursor guibg=Green
 set bs=2
 set autoindent
-set number 
+set number
 set laststatus=2
 set ruler
 set ignorecase
@@ -27,3 +27,5 @@ nmap \| :NERDTreeFind<CR>
 nmap <Bslash> :NERDTreeToggle<CR>
 nmap ,/ <plug>NERDCommenterToggle
 vmap ,/ <plug>NERDCommenterToggle
+
+nnoremap Y y$
