@@ -149,7 +149,7 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 defaults write com.apple.finder AppleShowAllFiles -boolean true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
-# Store screenshots in subfolder on desktop
+# Setup screenshots directory
 mkdir ~/Documents/Screenshots
 defaults write com.apple.screencapture location ~/Documents/Screenshots
 killall Finder
