@@ -21,6 +21,8 @@ set ignorecase
 set smartcase
 set history=1000
 
+filetype plugin on
+
 colors Tomorrow-Night-Bright
 
 nmap \| :NERDTreeFind<CR>
