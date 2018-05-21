@@ -12,7 +12,7 @@ brew tap homebrew/science
 brew tap caskroom/cask
 brew tap caskroom/versions
 
-brew install gcc # Takes FOREVER (~1 hour)
+brew install gcc # Can take FOREVER (~1 hour)
 brew install git
 brew install ctags
 brew install ag
@@ -23,25 +23,45 @@ brew install wget
 brew install httpie
 brew install unrar
 brew install unar
+brew install calc
+brew install htop
+brew install geoip
+brew install hh
+brew install links
+brew install lynx
+brew install ncdu
+brew install nmap
+brew install speedtest_cli
+brew install findutils
+brew install fortune
+brew install sox # play -n synth 5 sine 440
+brew install ffmpeg
+brew install watch
+brew install macvim
+
 brew install node
-brew install python
+brew install python2
 brew install python3
 brew install r
 brew install ruby
 brew install go
 brew install kotlin
+
 brew install postgres
 brew install mysql
 brew install redis
-brew install findutils
-brew install fortune
-brew install sox # play -n synth 5 sine 440
-brew install ffmpeg
+
 brew install heroku/brew/heroku
 brew install chromedriver
-brew install macvim
-brew install docker docker-compose
 # brew install phantomjs # PhantomJs deprecated in favor of headless Chrome/Firefox
+
+brew cask install docker
+brew install docker
+brew install docker-compose
+brew install docker-machine
+brew install docker-completion
+brew install docker-compose-completion
+brew install docker-machine-completion
 
 brew cask install eqmac
 brew cask install flux
@@ -73,11 +93,14 @@ brew cask install intellij-idea
 
 # Defunct?
 # brew cask install sonos
+# brew cask install wunderlist
 
 brew linkapps
-brew cleanup
+brew cleanup -s
 brew cask cleanup
+brew prune
 brew doctor
+brew missing
 
 # Search terminal output for “==> Caveats” for post-brew instructions
 
