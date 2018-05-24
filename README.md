@@ -32,6 +32,7 @@ brew install lynx
 brew install ncdu
 brew install nmap
 brew install speedtest_cli
+brew install f3
 brew install findutils
 brew install fortune
 brew install sox # play -n synth 5 sine 440
