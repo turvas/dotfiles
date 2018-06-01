@@ -202,6 +202,7 @@ mkdir ~/workspace
 # http://www.dejal.com/timeout/
 # http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/
 # Wunderlist
+# Sonos
 
 # === Chrome Plugins ===
 # HTTPS Everywhere
