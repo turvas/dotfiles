@@ -53,7 +53,6 @@ brew install mysql
 brew install redis
 
 brew install heroku/brew/heroku
-brew install chromedriver
 # brew install phantomjs # PhantomJs deprecated in favor of headless Chrome/Firefox
 
 brew cask install docker
@@ -69,7 +68,8 @@ brew cask install flux
 brew cask install postman
 brew cask install charles
 brew cask install google-chrome
-brew cask install google-chrome-canary
+brew cask install chromedriver
+# brew cask install google-chrome-canary
 brew cask install firefox
 brew cask install grandperspective
 brew cask install iterm2
@@ -184,8 +184,18 @@ defaults write NSGlobalDomain KeyRepeat -int 0.02
 # Set a shorter Delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
+# Turn on three-finger-drag
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerSwipeGesture -int 1
+
 # Create workspace directory
 mkdir ~/workspace
+
+# === No longer scriptable ===
+# Set mouse tracking speed
+# Hide dock
+# Clear default crap from dock
+# Hide menu bar
+# Turn on trackpad tap-to-click
 
 # === Other Stuff ===
 # https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip (Old version had better hotkeys)
