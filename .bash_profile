@@ -2,6 +2,7 @@
 export EDITOR=vim
 
 ### ALIASES ###
+alias reload='source ~/.bash_profile'
 alias grep='grep --color=auto'
 alias l='ls -lhaFG'
 alias ll='ls -lhaFrtG'
