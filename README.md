@@ -1,7 +1,9 @@
 
-This repo contains ⏣SUPERIOR ULTRABEST™⏣ bash/git/vim configuration dotfiles for 1337 \*NIX H4X025.
+⏣SUPERIOR ULTRABEST™⏣ bash/git/vim configuration dotfiles for 1337 \*NIX H4X025.
 
-The commands in the README below are specific to setting up a new instance of OSX.
+---
+
+The commands in the README below are specific to setting up a new instance of OSX (except the vim plugins/colors setup which should work anywhere).
 
 ```bash
 # Set new hostname
