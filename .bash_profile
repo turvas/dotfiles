@@ -1,7 +1,33 @@
 # Default editor is vi which breaks things like crontab
-EDITOR=vim
+export EDITOR=vim
 
-export PATH=~/.local/bin:~/Library/Python/3.6/bin:$PATH
+### ALIASES ###
+alias grep='grep --color=auto'
+alias l='ls -lhaFG'
+alias ll='ls -lhaFrtG'
+alias h='history'
+alias gh='history | grep -i $1'
+alias psef='ps -ef | head -1;  ps -ef | grep -v grep | grep --color=auto -i $1'
+alias d='du -sch ./*'
+alias f='find . -iname $1'
+# alias ip='curl https://api.ipify.org'
+alias ip='curl https://ifconfig.co'
+# alias iip='ifconfig | grep -o "inet \(192\.168\.\d\+\.\d\+\)" | grep -o "192\.168\.\d\+\.\d\+"'
+alias iip='ifconfig | grep "inet " | tail -1 | cut -d " " -f2'
+alias weather='curl wttr.in/nyc'
+alias tag='ctags -R --exclude=.git -exclude=log -exclude=logs'
+
+# Docker
+alias doc='docker'
+alias ds='docker exec -it $1 bash'
+alias dpa='docker ps -a'
+
+# OSX
+alias off='pmset displaysleepnow'
+
+# LINUX
+# alias l='ls -lhaF --color=auto'
+# alias ll='ls -lhaFrtG --color=auto'
 
 # Change default ls directory color to be readable on dark background
 # (OSX)
@@ -26,27 +52,6 @@ shopt -s histappend
 # Save multi-line commands as one command
 shopt -s cmdhist
 
-### ALIASES ###
-alias grep='grep --color=auto'
-alias l='ls -lhaFG'
-alias ll='ls -lhaFrtG'
-alias h='history'
-alias gh='history | grep -i $1'
-alias psef='ps -ef | head -1;  ps -ef | grep -v grep | grep --color=auto -i $1'
-alias d='du -sch ./*'
-alias f='find . -iname $1'
-# curl 'https://api.ipify.org'
-alias ip='curl https://ifconfig.co'
-# alias iip='ifconfig | grep -o "inet \(192\.168\.\d\+\.\d\+\)" | grep -o "192\.168\.\d\+\.\d\+"'
-alias iip='ifconfig | grep "inet " | tail -1 | cut -d " " -f2'
-alias weather='curl wttr.in/nyc'
-alias tag='ctags -R --exclude=.git -exclude=log -exclude=logs'
-# OSX
-alias off='pmset displaysleepnow'
-# LINUX
-# alias l='ls -lhaF --color=auto'
-# alias ll='ls -lhaFrtG --color=auto'
-
 ### GIT COMPLETION ###
 # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 if [ -f ~/.git-completion.bash ]; then
@@ -61,6 +66,9 @@ then
     bind "set completion-ignore-case on"
     bind "set show-all-if-ambiguous on"
 fi
+
+### PATH ###
+export PATH=~/.local/bin:$PATH
 
 ### EXPLAINSHELL ###
 # Open a command in http://explainshell.com/: explain [command]
