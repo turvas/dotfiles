@@ -172,13 +172,6 @@ sudo gem install cocoapods
 mkdir ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_12.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_12.dvtcolortheme
 
-# Configs for bash, vim, git
-wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.bash_profile -O ~/.bash_profile
-wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.vimrc -O ~/.vimrc
-wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.gitconfig -O ~/.gitconfig
-wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.gitignore -O ~/.gitignore
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
-
 # Display full path and all files in Finder
 defaults write com.apple.finder AppleShowAllFiles -boolean true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
