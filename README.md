@@ -4,17 +4,25 @@ The dotfiles in this repo should work with bash on any platform.  The commands b
 # Set new hostname
 sudo scutil --set HostName [new hostname]
 
+# Command-line tools
+xcode-select --install
+
 # Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew update
-brew tap homebrew/science
 brew tap caskroom/cask
 brew tap caskroom/versions
+brew install wget
 
-brew install gcc # Can take FOREVER (~1 hour)
-brew install git
-brew install ctags
+# Configs for bash, vim, git
+wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.bash_profile -O ~/.bash_profile
+wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.vimrc -O ~/.vimrc
+wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.gitconfig -O ~/.gitconfig
+wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.gitignore -O ~/.gitignore
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+
+# Command line tools
 brew install ag
 brew install pv
 brew install tree
@@ -40,21 +48,34 @@ brew install ffmpeg
 brew install watch
 brew install macvim
 
+# Languages
 brew install node
+brew install python # Now defaults to python 3
 brew install python2
-brew install python3
 brew install r
 brew install ruby
 brew install go
 brew install kotlin
+brew cask install java
 
+# Dev tools
+brew install gcc # Can take FOREVER (~1 hour)
+brew install git
+brew install ctags
+brew cask install chromedriver
+brew cask install postman
+brew cask install charles
+brew cask install rstudio
+brew cask install android-studio
+brew cask install intellij-idea
+brew cask install ngrok
+# brew install phantomjs # PhantomJs deprecated in favor of headless Chrome/Firefox
+
+# Infrastructure/devops
 brew install postgres
 brew install mysql
 brew install redis
-
 brew install heroku/brew/heroku
-# brew install phantomjs # PhantomJs deprecated in favor of headless Chrome/Firefox
-
 brew cask install docker
 brew install docker
 brew install docker-compose
@@ -63,33 +84,26 @@ brew install docker-completion
 brew install docker-compose-completion
 brew install docker-machine-completion
 
+# Desktop tools/apps
 brew cask install eqmac
 brew cask install flux
-brew cask install postman
-brew cask install charles
 brew cask install google-chrome
-brew cask install chromedriver
 # brew cask install google-chrome-canary
 brew cask install firefox
 brew cask install grandperspective
 brew cask install iterm2
-brew cask install java
 brew cask install menumeters
-brew cask install rstudio
 brew cask install slack
 brew cask install sloth
 brew cask install spotify
 brew cask install steam
 brew cask install textmate
 brew cask install vlc
-brew cask install ngrok
 brew cask install menubar-countdown
 brew cask install accessmenubarapps
 brew cask install imagej
 brew cask install google-earth
 brew cask install chromecast
-brew cask install android-studio
-brew cask install intellij-idea
 # brew cask install shiftit # I prefer the old hotkeys: https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip
 
 # Defunct?
