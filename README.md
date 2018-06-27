@@ -8,6 +8,7 @@ sudo scutil --set HostName [new hostname]
 xcode-select --install
 
 # Homebrew
+# After installs, search terminal output for “==> Caveats” for post-brew instructions
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 brew tap caskroom/cask
@@ -84,13 +85,13 @@ brew install docker-compose-completion
 brew install docker-machine-completion
 
 # Desktop tools/apps
+brew cask install iterm2
 brew cask install eqmac
 brew cask install flux
 brew cask install google-chrome
 # brew cask install google-chrome-canary
 brew cask install firefox
 brew cask install grandperspective
-brew cask install iterm2
 brew cask install menumeters
 brew cask install slack
 brew cask install sloth
@@ -109,14 +110,13 @@ brew cask install chromecast
 # brew cask install sonos
 # brew cask install wunderlist
 
+# Homebrew cleanup
 brew linkapps
 brew cleanup -s
 brew cask cleanup
 brew prune
 brew doctor
 brew missing
-
-# Search terminal output for “==> Caveats” for post-brew instructions
 
 npm install -g vtop
 
@@ -149,31 +149,28 @@ brew install pkg-config
 pip install matplotlib
 pip3 install matplotlib
 
-# XCode
-sudo gem install cocoapods
-mkdir ~/Library/Developer/Xcode/UserData/FontAndColorThemes
-wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_12.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_12.dvtcolortheme
-wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_13.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_13.dvtcolortheme
-wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_14.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_14.dvtcolortheme
-
-# Vim Pathogen
+# Vim plugins (using Pathogen)
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
 git clone https://github.com/mileszs/ack.vim.git ~/.vim/bundle/ack.vim
-git clone https://github.com/scrooloose/syntastic ~/.vim/bundle/syntastic
 git clone https://github.com/bronson/vim-trailing-whitespace ~/.vim/bundle/vim-trailing-whitespace
 git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 git clone https://github.com/ervandew/supertab ~/.vim/bundle/supertab
 git clone https://github.com/ntpeters/vim-better-whitespace.git ~/.vim/bundle/vim-better-whitespace
-
+# git clone https://github.com/scrooloose/syntastic ~/.vim/bundle/syntastic # 🐌Removed because Syntastic can make vim unuseably slow
 
 # Vim colors
 mkdir ~/.vim/colors
 git clone https://github.com/chriskempson/tomorrow-theme.git ~/.vim/colors/tomorrow-theme
 cp ~/.vim/colors/tomorrow-theme/vim/colors/*.vim ~/.vim/colors/
+
+# XCode
+sudo gem install cocoapods
+mkdir ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_12.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_12.dvtcolortheme
 
 # Configs for bash, vim, git
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.bash_profile -O ~/.bash_profile
