@@ -19,7 +19,7 @@ alias tag='ctags -R --exclude=.git -exclude=log -exclude=logs'
 
 # Docker
 alias doc='docker'
-alias ds='docker exec -it $1 bash'
+function dshell() { docker exec -it "$1" bash; }
 alias dpa='docker ps -a'
 
 # OSX
