@@ -1,4 +1,7 @@
-The dotfiles in this repo should work with bash on any platform.  The commands below are specific to setting up a new instance of OSX.
+
+This repo contains ⏣SUPERIOR ULTRABEST™⏣ bash/git/vim configuration dotfiles for 1337 \*NIX H4X025.
+
+The commands in the README below are specific to setting up a new instance of OSX.
 
 ```bash
 # Set new hostname
