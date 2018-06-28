@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+filetype plugin on
+
 set showmatch
 set expandtab
 set tabstop=4
