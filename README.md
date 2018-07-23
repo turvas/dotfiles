@@ -89,7 +89,7 @@ brew install docker-completion
 brew install docker-compose-completion
 brew install docker-machine-completion
 
-# Desktop tools/apps
+# Desktop apps
 brew cask install iterm2
 brew cask install eqmac
 brew cask install flux
@@ -101,6 +101,7 @@ brew cask install menumeters
 brew cask install slack
 brew cask install sloth
 brew cask install spotify
+brew cask install mortenjust-pocketcasts
 brew cask install steam
 brew cask install textmate
 brew cask install vlc
@@ -112,7 +113,7 @@ brew cask install chromecast
 brew cask install time-out
 # brew cask install shiftit # I prefer the old hotkeys: https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip
 
-# Defunct?
+# Defunct formulae?
 # brew cask install sonos
 # brew cask install wunderlist
 
