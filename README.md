@@ -14,6 +14,8 @@ xcode-select --install
 
 # Homebrew
 # After installs, search terminal output for “==> Caveats” for post-brew instructions
+#For up-to-date formulae, check https://formulae.brew.sh/
+# For up-to-date cask formulae, check https://github.com/Homebrew/homebrew-cask/tree/master/Casks
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 brew tap caskroom/cask
@@ -73,6 +75,7 @@ brew cask install charles
 brew cask install rstudio
 brew cask install android-studio
 brew cask install intellij-idea
+brew cask install visual-studio-code
 brew cask install ngrok
 # brew install phantomjs # PhantomJs deprecated in favor of headless Chrome/Firefox
 
@@ -101,7 +104,7 @@ brew cask install menumeters
 brew cask install slack
 brew cask install sloth
 brew cask install spotify
-brew cask install mortenjust-pocketcasts
+brew cask install pocket-casts
 brew cask install steam
 brew cask install textmate
 brew cask install vlc
