@@ -9,7 +9,7 @@
   ci = commit
   amend = commit --amend
   wip = commit -m "WIPWIPWIPWIPWIPWIPWIPWIP"
-  wipa = commit -am "WIPWIPWIPWIPWIPWIPWIPWIP"
+  wipall = commit -am "WIPWIPWIPWIPWIPWIPWIPWIP"
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
   l = log --graph --decorate --pretty=oneline --abbrev-commit
