@@ -8,6 +8,7 @@
   co = checkout
   ci = commit
   amend = commit --amend
+  amendall = commit -a --amend
   wip = commit -m "WIPWIPWIPWIPWIPWIPWIPWIP"
   wipall = commit -am "WIPWIPWIPWIPWIPWIPWIPWIP"
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
