@@ -10,7 +10,9 @@
   amend = commit --amend
   amendall = commit -a --amend
   wip = commit -m "WIPWIPWIPWIPWIPWIPWIPWIP"
-  wipall = commit -am "WIPWIPWIPWIPWIPWIPWIPWIP"
+  wipall = !git add :/ && git commit -am "WIPWIPWIPWIPWIPWIPWIPWIP"
+  fix = commit -m "fixup"
+  fixall = !git add :/ && git fix
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
   l = log --graph --decorate --pretty=oneline --abbrev-commit
