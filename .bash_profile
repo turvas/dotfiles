@@ -25,6 +25,7 @@ alias dpa='docker ps -a'
 
 # OSX
 alias off='pmset displaysleepnow'
+alias index='sudo mdutil -E /'
 
 # LINUX
 # alias l='ls -lhaF --color=auto'
