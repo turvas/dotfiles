@@ -170,6 +170,7 @@ git clone https://github.com/bronson/vim-trailing-whitespace ~/.vim/bundle/vim-t
 git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 git clone https://github.com/ervandew/supertab ~/.vim/bundle/supertab
 git clone https://github.com/ntpeters/vim-better-whitespace.git ~/.vim/bundle/vim-better-whitespace
+git clone https://github.com/sheerun/vim-polyglot.git ~/.vim/bundle/vim-polyglot
 # git clone https://github.com/scrooloose/syntastic ~/.vim/bundle/syntastic # 🐌Removed because Syntastic can make vim unuseably slow
 
 # Vim colors
