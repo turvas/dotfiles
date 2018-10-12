@@ -23,6 +23,11 @@ brew tap caskroom/versions
 brew install wget
 
 # Configs for bash, vim, git
+TODAY=`date "+%Y%m%d"`
+mv ~/.bash_profile ~/.bash_profile.$TODAY
+mv ~/.vimrc ~/.vimrc.$TODAY
+mv ~/.gitconfig ~/.gitconfig.$TODAY
+mv ~/.gitignore ~/.gitignore.$TODAY
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.bash_profile -O ~/.bash_profile
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.vimrc -O ~/.vimrc
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.gitconfig -O ~/.gitconfig
