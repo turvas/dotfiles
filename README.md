@@ -27,7 +27,7 @@ wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.bash_profi
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.vimrc -O ~/.vimrc
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.gitconfig -O ~/.gitconfig
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.gitignore -O ~/.gitignore
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 
 # Command line tools
 brew install ag
@@ -128,6 +128,10 @@ brew prune
 brew doctor
 brew missing
 
+# iTerm2 configs
+wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/com.googlecode.iterm2.plist -O ~/Library/Preferences/com.googlecode.iterm2.plist
+
+# NPM
 npm install -g vtop
 
 # Optional packages
