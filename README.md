@@ -235,5 +235,8 @@ mkdir ~/workspace
 # Pocket
 # The Great Suspender
 # appear.in
-# repl.it
+# Stylus:
+#  - GitHub Dark
+#  - Hacker News Dark
+#  - Reddit Minimal Dark
 ```
