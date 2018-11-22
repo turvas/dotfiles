@@ -65,6 +65,7 @@ brew install node
 brew install python # Now defaults to python 3
 brew install python2
 brew install r
+chmod -R u+w /usr/local/Cellar/r # As of 11/20/2018 the Homebrew R installation doesn't set the proper permissions for installing CRAN packages
 brew install ruby
 brew install go
 brew install kotlin
