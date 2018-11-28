@@ -238,7 +238,9 @@ mkdir ~/workspace
 # appear.in
 # Dark Reader
 # Stylus:
-#  - GitHub Dark
-#  - Hacker News Dark
-#  - Reddit Minimal Dark
+#  - GitHub: https://userstyles.org/styles/37035/github-dark
+#  - StackOverflow: https://userstyles.org/styles/35345/stackoverflow-dark
+#  - Hacker News: https://userstyles.org/styles/161954/hackernews-one-dark
+#  - Reddit: https://userstyles.org/styles/129171/reddit-minimal-dark
+#  - Wikipedia: https://userstyles.org/styles/122072/wikipedia-dark-material-design
 ```
