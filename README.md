@@ -243,4 +243,5 @@ mkdir ~/workspace
 #  - Hacker News: https://userstyles.org/styles/161954/hackernews-one-dark
 #  - Reddit: https://userstyles.org/styles/129171/reddit-minimal-dark
 #  - Wikipedia: https://userstyles.org/styles/122072/wikipedia-dark-material-design
+#  - Google: https://userstyles.org/styles/105045/google-drive-dark
 ```
