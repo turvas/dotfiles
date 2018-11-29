@@ -120,6 +120,7 @@ brew cask install imagej
 brew cask install google-earth
 brew cask install chromecast
 brew cask install time-out
+brew cask install whatsapp
 # brew cask install shiftit # I prefer the old hotkeys: https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip
 
 # Defunct formulae?
