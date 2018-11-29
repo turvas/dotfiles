@@ -121,7 +121,7 @@ brew cask install google-earth
 brew cask install chromecast
 brew cask install time-out
 brew cask install whatsapp
-# brew cask install shiftit # I prefer the old hotkeys: https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip
+# brew cask install shiftit # I prefer the old hotkeys: https://github.com/mitochondrion/dotfiles/raw/master/ShiftIt.app.zip (mirror of https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip)
 
 # Defunct formulae?
 # brew cask install sonos
