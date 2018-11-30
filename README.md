@@ -3,7 +3,7 @@
 
 ---
 
-The commands in the README below are specific to setting up a new instance of OSX (except the vim plugins/colors setup which should work anywhere).
+The commands in the README below are specific to setting up a new instance of OSX and the associated tools/applications.
 
 ```bash
 # Set new hostname
