@@ -238,7 +238,7 @@ mkdir ~/workspace
 # The Great Suspender
 # appear.in
 # Dark Reader
-# Stylus:
+# Stylus (install styles from https://userstyles.org):
 #  - GitHub: https://userstyles.org/styles/37035/github-dark
 #  - StackOverflow: https://userstyles.org/styles/35345/stackoverflow-dark
 #  - Hacker News: https://userstyles.org/styles/161954/hackernews-one-dark
