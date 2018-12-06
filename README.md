@@ -245,5 +245,5 @@ mkdir ~/workspace
 #  - Reddit: https://userstyles.org/styles/129171/reddit-minimal-dark
 #  - Wikipedia: https://userstyles.org/styles/42313/dark-wikipedia
 #  - Google Drive: https://userstyles.org/styles/105045/google-drive-dark
-#  - Gmail: https://userstyles.org/styles/155141/dark-gmail-2018-by-dm
+#  - Google Calendar: https://userstyles.org/styles/157431/a-googlecalendar-darkly
 ```
