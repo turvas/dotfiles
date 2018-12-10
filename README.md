@@ -229,21 +229,6 @@ mkdir ~/workspace
 # Wunderlist
 # Sonos
 
-# === Chrome Plugins ===
-# HTTPS Everywhere
-# Privacy Badger
-# JSON Viewer
-# Zhongwen Chinese Popup Dictionary
-# Pocket
-# The Great Suspender
-# appear.in
-# Dark Reader
-# Stylus (install styles from https://userstyles.org):
-#  - GitHub: https://github.com/StylishThemes/GitHub-Dark (Old: https://userstyles.org/styles/37035/github-dark)
-#  - StackOverflow: https://userstyles.org/styles/35345/stackoverflow-dark
-#  - Hacker News: https://userstyles.org/styles/161954/hackernews-one-dark
-#  - Reddit: https://userstyles.org/styles/129171/reddit-minimal-dark
-#  - Wikipedia: https://userstyles.org/styles/42313/dark-wikipedia
-#  - Google Drive: https://userstyles.org/styles/105045/google-drive-dark
-#  - Google Calendar: https://userstyles.org/styles/157431/a-googlecalendar-darkly
+# === Browser Plugins ===
+# https://github.com/mitochondrion/notes/wiki/Browser-Plugins
 ```
