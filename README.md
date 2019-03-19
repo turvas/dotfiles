@@ -40,6 +40,7 @@ brew install pv
 brew install tree
 brew install gawk
 brew install wget
+brew install openssl
 brew install httpie
 brew install unrar
 brew install unar
