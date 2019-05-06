@@ -132,12 +132,8 @@ brew cask install MacDown
 # brew cask install wunderlist
 
 # Homebrew cleanup
-brew linkapps
 brew cleanup -s
-brew cask cleanup
-brew prune
 brew doctor
-brew missing
 
 # iTerm2 configs
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/com.googlecode.iterm2.plist -O ~/Library/Preferences/com.googlecode.iterm2.plist
