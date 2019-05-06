@@ -19,6 +19,7 @@ xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 brew tap caskroom/cask
+brew tap homebrew/cask-drivers
 brew tap caskroom/versions
 brew install wget
 
@@ -111,6 +112,7 @@ brew cask install menumeters
 brew cask install slack
 brew cask install sloth
 brew cask install spotify
+brew cask install sonos
 brew cask install pocket-casts
 brew cask install steam
 brew cask install textmate
