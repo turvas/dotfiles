@@ -16,7 +16,7 @@ alias ip='curl https://ifconfig.co'
 # alias iip='ifconfig | grep -o "inet \(192\.168\.\d\+\.\d\+\)" | grep -o "192\.168\.\d\+\.\d\+"'
 alias iip='ifconfig | grep "inet " | tail -1 | cut -d " " -f2'
 alias weather='curl wttr.in/nyc'
-alias tag='ctags -R --exclude=.git -exclude=log -exclude=logs'
+alias tag='ctags -R -f ./.git/tags .'
 
 # Docker
 alias doc='docker'
