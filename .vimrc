@@ -25,6 +25,8 @@ set history=1000
 
 filetype plugin on
 
+set tags+=tags;$HOME
+
 colors Tomorrow-Night-Bright
 
 nmap \| :NERDTreeFind<CR>
@@ -44,4 +46,23 @@ augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+"""""""""""""""""""""""""""""
+" Check .git/tags for ctags file
+"""""""""""""""""""""""""""""
+fun! FindTagsFileInGitDir(file)
+  let path = fnamemodify(a:file, ':p:h')
+  while path != '/'
+    let fname = path . '/.git/tags'
+    if filereadable(fname)
+      silent! exec 'set tags+=' . fname
+    endif
+    let path = fnamemodify(path, ':h')
+  endwhile
+endfun
+
+augroup CtagsGroup
+  autocmd!
+  autocmd BufRead * call FindTagsFileInGitDir(expand("<afile>"))
 augroup END
