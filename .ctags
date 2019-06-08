@@ -1,0 +1,6 @@
+--exclude=.git
+--exclude=log
+--exclude=logs
+--exclude=doc
+--exclude=docs
+--exclude=tmp
