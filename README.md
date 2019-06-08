@@ -31,6 +31,7 @@ mv ~/.gitconfig ~/.gitconfig.$TODAY
 mv ~/.gitignore ~/.gitignore.$TODAY
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.bash_profile -O ~/.bash_profile
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.vimrc -O ~/.vimrc
+wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.ctags -O ~/.ctags
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.gitconfig -O ~/.gitconfig
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.gitignore -O ~/.gitignore
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
