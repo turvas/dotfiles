@@ -25,6 +25,7 @@ set history=1000
 
 filetype plugin on
 
+" Search for ctags file recursing up directory structure stopping at $HOME
 set tags+=tags;$HOME
 
 colors Tomorrow-Night-Bright
