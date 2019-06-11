@@ -22,6 +22,7 @@ set ruler
 set ignorecase
 set smartcase
 set history=1000
+set mouse=a
 
 filetype plugin on
 
