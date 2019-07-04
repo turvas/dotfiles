@@ -10,7 +10,7 @@ alias h='history'
 alias gh='history | grep -i $1'
 alias psef='ps -ef | head -1;  ps -ef | grep -v grep | grep --color=auto -i $1'
 alias d='du -sch ./*'
-alias f='find . -iname $1'
+function f() { find . -iname "*$1*"; }
 # alias ip='curl https://api.ipify.org'
 alias ip='curl https://ifconfig.co'
 # alias iip='ifconfig | grep -o "inet \(192\.168\.\d\+\.\d\+\)" | grep -o "192\.168\.\d\+\.\d\+"'
