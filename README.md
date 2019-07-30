@@ -1,9 +1,16 @@
 
 ⏣SUPERIOR ULTRABEST™⏣ bash/git/vim configuration dotfiles for 1337 \*NIX H4X025.
 
----
+## Install dotfiles
+```
+cd ~
+git clone git@github.com:mitochondrion/dotfiles.git
+cd dotfiles
+./install_dotfiles.sh
+```
 
-The commands in the README below are specific to setting up a new instance of OSX and the associated tools/applications.
+## Setup new OSX install
+Use the below commands to set up a new instance of OSX and the associated tools/applications. Mix and match at your heart's desire!
 
 ```bash
 # Set new hostname
@@ -22,19 +29,6 @@ brew tap caskroom/cask
 brew tap homebrew/cask-drivers
 brew tap caskroom/versions
 brew install wget
-
-# Configs for bash, vim, git
-TODAY=`date "+%Y%m%d"`
-mv ~/.bash_profile ~/.bash_profile.$TODAY
-mv ~/.vimrc ~/.vimrc.$TODAY
-mv ~/.gitconfig ~/.gitconfig.$TODAY
-mv ~/.gitignore ~/.gitignore.$TODAY
-wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.bash_profile -O ~/.bash_profile
-wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.vimrc -O ~/.vimrc
-wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.ctags -O ~/.ctags
-wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.gitconfig -O ~/.gitconfig
-wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.gitignore -O ~/.gitignore
-wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 
 # Command line tools
 brew install ag
@@ -135,6 +129,12 @@ brew cask install MacDown
 # Homebrew cleanup
 brew cleanup -s
 brew doctor
+
+# Install dotfiles
+cd ~
+git clone git@github.com:mitochondrion/dotfiles.git
+cd dotfiles
+./install_dotfiles.sh
 
 # iTerm2 configs
 wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/com.googlecode.iterm2.plist -O ~/Library/Preferences/com.googlecode.iterm2.plist
