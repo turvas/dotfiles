@@ -4,8 +4,8 @@
 ## Install dotfiles
 ```
 cd ~
-git clone git@github.com:mitochondrion/dotfiles.git
-cd dotfiles
+git clone git@github.com:mitochondrion/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 ./install_dotfiles.sh
 ```
 
