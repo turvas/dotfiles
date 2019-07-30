@@ -1,6 +1,9 @@
 # Default editor is vi which breaks things like crontab
 export EDITOR=vim
 
+# For Java installed via Homebrew
+export JAVA_HOME="$(/usr/libexec/java_home)"
+
 ### ALIASES ###
 alias reload='source ~/.bash_profile'
 alias grep='grep --color=auto'
