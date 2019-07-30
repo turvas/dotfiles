@@ -12,11 +12,11 @@ mv ~/.gitignore ~/.gitignore.$TODAY
 mv ~/.ctags ~/.ctags.$TODAY
 
 # Create symlinks to repository dotfiles
-ln -s ~/.bash_profile ${PWD}/.bash_profile
-ln -s ~/.vimrc ${PWD}/.vimrc
-ln -s ~/.gitconfig ${PWD}/.gitconfig
-ln -s ~/.gitignore ${PWD}/.gitignore
-ln -s ~/.ctags ${PWD}/.ctags
+ln -s ${PWD}/.bash_profile ~/.bash_profile
+ln -s ${PWD}/.vimrc ~/.vimrc
+ln -s ${PWD}/.gitconfig ~/.gitconfig
+ln -s ${PWD}/.gitignore ~/.gitignore
+ln -s ${PWD}/.ctags ~/.ctags
 
 # Install Git completion from the official Git repo
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
