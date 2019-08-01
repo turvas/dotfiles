@@ -72,6 +72,7 @@ brew cask install java
 brew install gcc # Can take FOREVER (~1 hour)
 brew install git
 brew install ctags
+brew install gradle
 brew cask install chromedriver
 brew cask install postman
 brew cask install charles
