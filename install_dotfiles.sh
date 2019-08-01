@@ -21,4 +21,4 @@ ln -s ${PWD}/.ctags ~/.ctags
 # Install Git completion from the official Git repo
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 
-source ~/.bash_profile
+echo -e "Run the following command to complete installation:\nsource ~/.bash_profile"
