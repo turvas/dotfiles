@@ -2,7 +2,7 @@
 ⏣SUPERIOR ULTRABEST™⏣ bash/git/vim configuration dotfiles for 1337 \*NIX H4X025.
 
 ## Install dotfiles
-```
+```bash
 cd ~
 git clone git@github.com:mitochondrion/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
