@@ -142,6 +142,7 @@ wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/com.googlec
 
 # NPM
 npm install -g vtop
+npm install -g json-minify
 
 # Optional packages
 # brew cask install sequel-pro
