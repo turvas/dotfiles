@@ -56,6 +56,7 @@ brew install sox # play -n synth 5 sine 440
 brew install ffmpeg
 brew install watch
 brew install macvim
+brew install gnu-go
 
 # Languages
 brew install node
@@ -121,6 +122,7 @@ brew cask install chromecast
 brew cask install time-out
 brew cask install whatsapp
 brew cask install MacDown
+brew cask install sabaki
 # brew cask install shiftit # I prefer the old hotkeys: https://github.com/mitochondrion/dotfiles/raw/master/ShiftIt.app.zip (mirror of https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip)
 
 # Defunct formulae?
