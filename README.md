@@ -13,17 +13,18 @@ source ~/.bash_profile # Apply new dotfiles to current shell
 Use the below commands to set up a new instance of OSX and the associated tools/applications. Mix and match at your heart's desire!
 
 ```bash
-# Set new hostname
-sudo scutil --set HostName [new hostname]
-
-# Command-line tools
+### Command-line tools
 xcode-select --install
 
-# Install dotfiles
+### Install dotfiles
 cd ~
 git clone git@github.com:mitochondrion/dotfiles.git
 cd dotfiles
 ./install_dotfiles.sh
+
+### Fix OSX defaults
+# Set new hostname
+sudo scutil --set HostName [new hostname]
 
 # Display full path and all files in Finder
 defaults write com.apple.finder AppleShowAllFiles -boolean true
@@ -46,15 +47,25 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerSwipeGe
 # Create workspace directory
 mkdir ~/workspace
 
-# Fix OSX Dock
+### Fix OSX Dock
 # Show hidden apps
-defaults write com.apple.Dock showhidden -bool yes; killall Dock
+defaults write com.apple.dock showhidden -bool yes
 # Speed up animations
-defaults write com.apple.dock autohide-time-modifier -float 0.5; killall Dock
+defaults write com.apple.dock autohide-time-modifier -float 0.5
 # Show only running apps
-defaults write com.apple.dock static-only -bool true; killall Dock
+defaults write com.apple.dock static-only -bool true
+# Restart Dock to load changes
+killall Dock
 
-# Homebrew
+# === No longer scriptable ===
+# Set mouse tracking speed
+# Hide dock
+# Remove default apps from Dock
+# Hide menu bar
+# Turn on trackpad tap-to-click
+# Turn on OSX Dark Mode
+
+### Homebrew
 # After installs, search terminal output for “==> Caveats” for post-brew instructions
 #For up-to-date formulae, check https://formulae.brew.sh/
 # For up-to-date cask formulae, check https://github.com/Homebrew/homebrew-cask/tree/master/Casks
@@ -168,20 +179,20 @@ brew cask install sabaki
 brew cleanup -s
 brew doctor
 
-# iTerm2 configs
+### iTerm2 configs
 # load iterm3_config.json iTerm2 3.0 configs manually via iTerm preferences menu
 
 # DEPRECATED 2.0 METHOD
 # wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/com.googlecode.iterm2.plist -O ~/Library/Preferences/com.googlecode.iterm2.plist
 
-# NPM
+### NPM
 npm install -g vtop
 npm install -g json-minify
 
 # Optional packages
 # brew cask install sequel-pro
 
-# PIP
+### PIP
 # sudo easy_install pip # Unnecessary due to "brew install python"
 pip3 install --upgrade pip setuptools wheel
 pip install --upgrade pip setuptools
@@ -207,6 +218,7 @@ brew install pkg-config
 pip install matplotlib
 pip3 install matplotlib
 
+### VIM
 # Vim plugins (using Pathogen)
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -231,14 +243,6 @@ cp ~/.vim/colors/tomorrow-theme/vim/colors/*.vim ~/.vim/colors/
 sudo gem install cocoapods
 mkdir ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_12.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_12.dvtcolortheme
-
-# === No longer scriptable ===
-# Set mouse tracking speed
-# Hide dock
-# Remove default apps from Dock
-# Hide menu bar
-# Turn on trackpad tap-to-click
-# Turn on OSX Dark Mode
 
 # === Other Stuff ===
 # https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip (Old version had better hotkeys)
