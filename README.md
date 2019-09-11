@@ -19,6 +19,41 @@ sudo scutil --set HostName [new hostname]
 # Command-line tools
 xcode-select --install
 
+# Install dotfiles
+cd ~
+git clone git@github.com:mitochondrion/dotfiles.git
+cd dotfiles
+./install_dotfiles.sh
+
+# Display full path and all files in Finder
+defaults write com.apple.finder AppleShowAllFiles -boolean true
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+
+# Setup screenshots directory
+mkdir ~/Documents/Screenshots
+defaults write com.apple.screencapture location ~/Documents/Screenshots
+killall Finder
+
+# Set a super fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 0.02
+
+# Set a shorter Delay until key repeat
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
+
+# Turn on three-finger-drag
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerSwipeGesture -int 1
+
+# Create workspace directory
+mkdir ~/workspace
+
+# Fix OSX Dock
+# Show hidden apps
+defaults write com.apple.Dock showhidden -bool yes; killall Dock
+# Speed up animations
+defaults write com.apple.dock autohide-time-modifier -float 0.5; killall Dock
+# Show only running apps
+defaults write com.apple.dock static-only -bool true; killall Dock
+
 # Homebrew
 # After installs, search terminal output for “==> Caveats” for post-brew instructions
 #For up-to-date formulae, check https://formulae.brew.sh/
@@ -133,14 +168,11 @@ brew cask install sabaki
 brew cleanup -s
 brew doctor
 
-# Install dotfiles
-cd ~
-git clone git@github.com:mitochondrion/dotfiles.git
-cd dotfiles
-./install_dotfiles.sh
-
 # iTerm2 configs
-wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/com.googlecode.iterm2.plist -O ~/Library/Preferences/com.googlecode.iterm2.plist
+# load iterm3_config.json iTerm2 3.0 configs manually via iTerm preferences menu
+
+# DEPRECATED 2.0 METHOD
+# wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/com.googlecode.iterm2.plist -O ~/Library/Preferences/com.googlecode.iterm2.plist
 
 # NPM
 npm install -g vtop
@@ -200,33 +232,13 @@ sudo gem install cocoapods
 mkdir ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 wget https://raw.githubusercontent.com/mitochondrion/XcodePreferences/master/FontAndColorThemes/akitchen_12.dvtcolortheme -O ~/Library/Developer/Xcode/UserData/FontAndColorThemes/akitchen_12.dvtcolortheme
 
-# Display full path and all files in Finder
-defaults write com.apple.finder AppleShowAllFiles -boolean true
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
-
-# Setup screenshots directory
-mkdir ~/Documents/Screenshots
-defaults write com.apple.screencapture location ~/Documents/Screenshots
-killall Finder
-
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0.02
-
-# Set a shorter Delay until key repeat
-defaults write NSGlobalDomain InitialKeyRepeat -int 12
-
-# Turn on three-finger-drag
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerSwipeGesture -int 1
-
-# Create workspace directory
-mkdir ~/workspace
-
 # === No longer scriptable ===
 # Set mouse tracking speed
 # Hide dock
-# Clear default crap from dock
+# Remove default apps from Dock
 # Hide menu bar
 # Turn on trackpad tap-to-click
+# Turn on OSX Dark Mode
 
 # === Other Stuff ===
 # https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip (Old version had better hotkeys)
