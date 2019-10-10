@@ -169,7 +169,8 @@ brew cask install time-out
 brew cask install whatsapp
 brew cask install MacDown
 brew cask install sabaki
-# brew cask install shiftit # I prefer the old hotkeys: https://github.com/mitochondrion/dotfiles/raw/master/ShiftIt.app.zip (mirror of https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip)
+brew cask install spectacle
+# brew cask install shiftit # Replaced by spectacle. Also I prefer the old Shiftit hotkeys anyway: https://github.com/mitochondrion/dotfiles/raw/master/ShiftIt.app.zip (mirror of https://github.com/downloads/onsi/ShiftIt/ShiftIt.app.zip)
 
 # Defunct formulae?
 # brew cask install sonos
