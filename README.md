@@ -208,6 +208,8 @@ pip install ipython
 pip3 install ipython
 pip install jupyter
 pip3 install jupyter
+pip install jupyterthemes
+pip3 install jupyterthemes
 pip install pandas
 pip3 install pandas
 
