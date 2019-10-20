@@ -12,7 +12,7 @@ alias ll='ls -lhaFrtG'
 alias h='history'
 alias gh='history | grep -i $1'
 alias psef='ps -ef | head -1;  ps -ef | grep -v grep | grep --color=auto -i $1'
-alias d='du -sch ./*'
+alias d='GLOBIGNORE=.; du -sch *; GLOBIGNORE=; shopt -u dotglob nullglob'
 function f() { find . -iname "*$1*" | grep $1; }
 # alias ip='curl https://api.ipify.org'
 alias ip='curl https://ifconfig.co'
