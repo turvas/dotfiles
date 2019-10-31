@@ -9,6 +9,35 @@ cd ~/.dotfiles
 source ~/.bash_profile # Apply new dotfiles to current shell
 ```
 
+## Setup Vim
+```bash
+### Install dotfile (if you didn't install all dotfiles above)
+mv ~/.vimrc ~/.vimrc.`date "+%Y%m%d%H%M%S"` # Just in case...
+wget https://raw.githubusercontent.com/mitochondrion/dotfiles/master/.vimrc -O ~/.vimrc
+
+### Install Pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+### Install plugins
+git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
+git clone https://github.com/mileszs/ack.vim.git ~/.vim/bundle/ack.vim
+git clone https://github.com/bronson/vim-trailing-whitespace ~/.vim/bundle/vim-trailing-whitespace
+git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
+git clone https://github.com/ervandew/supertab ~/.vim/bundle/supertab
+git clone https://github.com/ntpeters/vim-better-whitespace.git ~/.vim/bundle/vim-better-whitespace
+git clone https://github.com/sheerun/vim-polyglot.git ~/.vim/bundle/vim-polyglot
+git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
+# git clone https://github.com/scrooloose/syntastic ~/.vim/bundle/syntastic # 🐌Removed because Syntastic can make vim unuseably slow
+
+# Install Vim colors
+mkdir -p ~/.vim/colors
+git clone https://github.com/chriskempson/tomorrow-theme.git ~/.vim/colors/tomorrow-theme
+cp ~/.vim/colors/tomorrow-theme/vim/colors/*.vim ~/.vim/colors/
+```
+
 ## Setup new OSX install
 Use the below commands to set up a new instance of OSX and the associated tools/applications. Mix and match at your heart's desire!
 
