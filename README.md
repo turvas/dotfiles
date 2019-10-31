@@ -1,5 +1,5 @@
 
-⏣SUPERIOR ULTRABEST™⏣ bash/git/vim configuration dotfiles for 1337 \*NIX H4X025.
+⏣SUPERIOR ULTRABEST™⏣ bash/git/vim configuration dotfiles for 1337 \*NIX H4X025 (plus _safe_ install script).
 
 ## Install dotfiles
 ```bash
