@@ -3,13 +3,13 @@
 cd "${0%/*}"
 
 # Move and save existing configs
-TODAY=`date "+%Y%m%d"`
+NOW=`date "+%Y%m%d%H%M%S"`
 
-mv ~/.bash_profile ~/.bash_profile.$TODAY
-mv ~/.vimrc ~/.vimrc.$TODAY
-mv ~/.gitconfig ~/.gitconfig.$TODAY
-mv ~/.gitignore ~/.gitignore.$TODAY
-mv ~/.ctags ~/.ctags.$TODAY
+mv --backup=t ~/.bash_profile ~/.bash_profile.$NOW
+mv --backup=t ~/.vimrc ~/.vimrc.$NOW
+mv --backup=t ~/.gitconfig ~/.gitconfig.$NOW
+mv --backup=t ~/.gitignore ~/.gitignore.$NOW
+mv --backup=t ~/.ctags ~/.ctags.$NOW
 
 # Create symlinks to repository dotfiles
 ln -s ${PWD}/.bash_profile ~/.bash_profile
