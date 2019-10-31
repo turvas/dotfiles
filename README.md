@@ -212,6 +212,8 @@ pip install jupyterthemes
 pip3 install jupyterthemes
 pip install pandas
 pip3 install pandas
+pip install scikit-learn
+pip3 install scikit-learn
 
 brew install gfortran
 pip install scipy
