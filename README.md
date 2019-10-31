@@ -9,6 +9,10 @@ cd ~/.dotfiles
 source ~/.bash_profile # Apply new dotfiles to current shell
 ```
 
+## Bash prompt
+Fancy bash prompt (with bonus pizza!) designed for legibility and speed, including timestamp, path, and local git branch/status. Git branch status colors explained in below screenshot:
+![Git branch status colors](git_branch_status_colors.png)
+
 ## Setup Vim
 ```bash
 ### Install dotfile (if you didn't install all dotfiles above)
