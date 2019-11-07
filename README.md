@@ -136,6 +136,7 @@ brew install ffmpeg
 brew install watch
 brew install macvim
 brew install gnu-go
+brew install f3
 
 # Languages
 brew install node
