@@ -248,6 +248,9 @@ pip install pandas
 pip3 install pandas
 pip install scikit-learn
 pip3 install scikit-learn
+pip3 install altair
+pip3 install vega_datasets
+pip3 install hvplot
 
 brew install gfortran
 pip install scipy
