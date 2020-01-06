@@ -1,15 +1,19 @@
 #!/bin/bash
 
+set -e 
+set -o pipefail
+
 cd "${0%/*}"
 
 # Move and save existing configs
 NOW=`date "+%Y%m%d%H%M%S"`
 
-mv --backup=t ~/.bash_profile ~/.bash_profile.$NOW
-mv --backup=t ~/.vimrc ~/.vimrc.$NOW
-mv --backup=t ~/.gitconfig ~/.gitconfig.$NOW
-mv --backup=t ~/.gitignore ~/.gitignore.$NOW
-mv --backup=t ~/.ctags ~/.ctags.$NOW
+# On Linux you can add the "mv --backup=t" flag for even more safety, but it's not available on OSX :(
+mv ~/.bash_profile ~/.bash_profile.$NOW
+mv ~/.vimrc ~/.vimrc.$NOW
+mv ~/.gitconfig ~/.gitconfig.$NOW
+mv ~/.gitignore ~/.gitignore.$NOW
+mv ~/.ctags ~/.ctags.$NOW
 
 # Create symlinks to repository dotfiles
 ln -s ${PWD}/.bash_profile ~/.bash_profile
