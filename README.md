@@ -49,12 +49,6 @@ Use the below commands to set up a new instance of OSX and the associated tools/
 ### Command-line tools
 xcode-select --install
 
-### Install dotfiles
-cd ~
-git clone git@github.com:mitochondrion/dotfiles.git
-cd dotfiles
-./install_dotfiles.sh
-
 ### Fix OSX defaults
 # Set new hostname
 sudo scutil --set HostName [new hostname]
@@ -160,8 +154,10 @@ brew cask install charles
 brew cask install rstudio
 brew cask install android-studio
 brew cask install intellij-idea
+brew cask install pycharm-ce
 brew cask install visual-studio-code
 brew cask install ngrok
+brew cask install dbeaver
 # brew install phantomjs # PhantomJs deprecated in favor of headless Chrome/Firefox
 
 # Infrastructure/devops
@@ -213,6 +209,12 @@ brew cask install spectacle
 # Homebrew cleanup
 brew cleanup -s
 brew doctor
+
+### Install dotfiles
+git clone git@github.com:mitochondrion/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./install_dotfiles.sh # Don't worry, this will preserve existing dotfiles with timestamps!
+source ~/.bash_profile # Apply new dotfiles to current shell
 
 ### iTerm2 configs
 # load iterm3_config.json iTerm2 3.0 configs manually via iTerm preferences menu
