@@ -37,5 +37,5 @@
 [remote "origin"]
   prune = true
 [user]
-  email = mitochondrion@users.noreply.github.com
-  name = mitochondrion
+  email = turvas@users.noreply.github.com
+  name = turvas
