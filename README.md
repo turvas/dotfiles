@@ -3,7 +3,7 @@
 
 ## Install dotfiles
 ```bash
-git clone git@github.com:mitochondrion/dotfiles.git ~/.dotfiles
+git clone git@github.com:turvas/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install_dotfiles.sh # Don't worry, this will preserve existing dotfiles with timestamps!
 source ~/.bash_profile # Apply new dotfiles to current shell
