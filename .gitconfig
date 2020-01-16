@@ -31,6 +31,7 @@
   pager = less -x4
   editor = /usr/bin/vim
   excludesfile = ~/.gitignore
+	autocrlf = input
 [rerere]
   enabled = true
 [remote "origin"]
