@@ -24,6 +24,10 @@ ln -sn ${PWD}/.gitconfig ~/.gitconfig
 ln -sn ${PWD}/.gitignore ~/.gitignore
 #ln -sn ${PWD}/.ctags ~/.ctags
 
+mkdir -p ~/.vim
+mkdir -p ~/.vim/colors
+ln -sn ${PWD}/kalev.vim ~/.vim/colors/kalev.vim
+
 # Install Git completion from the official Git repo
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 
