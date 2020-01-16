@@ -1,7 +1,9 @@
 #!/bin/bash
 
-set -e 
-set -o pipefail
+#some original files may miss, and thus on mv whole script is interrupted
+#set -e 
+# no pipe cmds here
+#set -o pipefail
 
 cd "${0%/*}"
 
