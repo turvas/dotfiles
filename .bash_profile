@@ -18,7 +18,7 @@ function f() { find . -iname "*$1*" | grep $1; }
 alias ip='curl https://ifconfig.co'
 # alias iip='ifconfig | grep -o "inet \(192\.168\.\d\+\.\d\+\)" | grep -o "192\.168\.\d\+\.\d\+"'
 alias iip='ifconfig | grep "inet " | tail -1 | cut -d " " -f2'
-alias weather='curl wttr.in/nyc'
+alias weather='curl wttr.in/tll'
 alias tag='ctags --tag-relative -R -f ./.git/tags .'
 
 # Docker
@@ -139,7 +139,7 @@ function colored_git_branch {
 function set_bash_prompt {
   PS1="\n"
   # timestamp
-  PS1+="$COLOR_GREEN|$COLOR_BLUE\t$COLOR_GREEN|"
+  PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $COLOR_GREEN \h $COLOR_GREEN|"
   # path
   PS1+=" $COLOR_CYAN\w"
   PS1+="\n"
