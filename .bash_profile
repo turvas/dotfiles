@@ -2,13 +2,14 @@
 export EDITOR=vim
 
 # For Java installed via Homebrew
-export JAVA_HOME="$(/usr/libexec/java_home)"
+#export JAVA_HOME="$(/usr/libexec/java_home)"
 
 ### ALIASES ###
 alias reload='source ~/.bash_profile'
 alias grep='grep --color=auto'
-alias l='ls -lhaFG'
-alias ll='ls -lhaFrtG'
+alias cdl='cd /opt/bytelife/logstack'
+alias l='ls -lhaF'
+alias ll='ls -lhaFt'
 alias h='history'
 alias gh='history | grep -i $1'
 alias psef='ps -ef | head -1;  ps -ef | grep -v grep | grep --color=auto -i $1'

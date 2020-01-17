@@ -1,3 +1,20 @@
+[core]
+  pager = less -x4
+  editor = /usr/bin/vim
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[push]
+  default = simple
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+[user]
+  email = kalev@bytelife.com
+  name = kalev
 [alias]
   dif = diff
   dc = diff --cached
@@ -27,15 +44,7 @@
   show-stashes = "!function showStashes { \
       git stash list | awk -F: '{ printf \"\\n\\n\\n==========\\n\"; print $0; print \"==========\\n\\n\"; system(\"git stash show -p \" $1); }';  \
   }; showStashes"
-[core]
-  pager = less -x4
-  editor = /usr/bin/vim
-  excludesfile = ~/.gitignore
-	autocrlf = input
 [rerere]
   enabled = true
 [remote "origin"]
   prune = true
-[user]
-  email = turvas@users.noreply.github.com
-  name = turvas
