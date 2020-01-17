@@ -27,6 +27,8 @@ ln -sn ${PWD}/.gitignore ~/.gitignore
 mkdir -p ~/.vim
 mkdir -p ~/.vim/colors
 ln -sn ${PWD}/kalev.vim ~/.vim/colors/kalev.vim
+# curl -O https://raw.githubusercontent.com/niklas-8/vim-darkspace/master/colors/darkspace.vim
+ln -sn ${PWD}/darkspace.vim ~/.vim/colors/darkspace.vim
 
 # Install Git completion from the official Git repo
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
