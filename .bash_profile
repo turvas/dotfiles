@@ -14,6 +14,11 @@ fi
 alias reload='source ~/.bash_profile'
 alias grep='grep --color=auto'
 alias cdl='cd /opt/bytelife/logstack'
+if [ -f /etc/os-release ]; then # any linux
+        alias ls='ls --color'
+else # OS X color coding
+        alias ls='ls -G'
+fi
 alias l='ls -lhaF'
 alias ll='ls -lhaFrt'
 alias h='history'
