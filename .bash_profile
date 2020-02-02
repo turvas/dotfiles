@@ -4,6 +4,12 @@ export EDITOR=vim
 # For Java installed via Homebrew
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 
+which ipconfig 2> /dev/null
+if [ $? -eq 0 ]; then
+        alias iip='ipconfig | grep "inet " | grep -v "127.0.0.1" | awk '"'"'{print $2}'"'"
+else
+        alias iip='ip addr | grep "inet " | grep -v "127.0.0.1" | awk '"'"'{print $2}'"'"
+fi
 ### ALIASES ###
 alias reload='source ~/.bash_profile'
 alias grep='grep --color=auto'
@@ -19,7 +25,6 @@ function f() { find . -iname "*$1*" | grep $1; }
 alias eip='curl https://ifconfig.co'
 # alias iip='ifconfig | grep -o "inet \(192\.168\.\d\+\.\d\+\)" | grep -o "192\.168\.\d\+\.\d\+"'
 #alias iip='ifconfig | grep "inet " | tail -1 | cut -d " " -f2'
-alias iip='ifconfig | grep "inet " | grep -v "127.0.0.1" | awk '"'"'{print $2}'"'"
 alias weather='curl wttr.in/tll'
 alias tag='ctags --tag-relative -R -f ./.git/tags .'
 
