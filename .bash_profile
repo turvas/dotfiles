@@ -109,9 +109,11 @@ COLOR_RED_BOLD="\[\033[1;31m\]"
 COLOR_GREEN="\[\033[0;32m\]"
 COLOR_YELLOW="\[\033[0;33m\]"
 COLOR_BLUE="\[\033[0;34m\]"
+COLOR_BLUE_LIGHT="\[\033[0;94m\]"
 COLOR_MAGENTA="\[\033[0;35m\]"
 COLOR_CYAN="\[\033[0;36m\]"
 COLOR_WHITE="\[\033[0;37m\]"
+
 COLOR_RESET="\[\033[0m\]"
 # 88/256 color terminals
 COLOR_OCHRE="\[\033[38;5;95m\]"
@@ -129,7 +131,7 @@ function git_status_color {
   elif [[ $git_status =~ "Your branch is behind" ]] || [[ $git_status =~ "different commits each" ]]; then
     echo $COLOR_YELLOW
   elif [[ $git_status =~ "untracked files present" ]]; then
-    echo $COLOR_YELLOW
+    echo $COLOR_BLUE_LIGHT
   elif [[ $git_status =~ "nothing to commit" ]]; then
     echo $COLOR_GREEN
   else
