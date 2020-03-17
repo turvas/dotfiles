@@ -116,7 +116,9 @@ COLOR_RESET="\[\033[0m\]"
 function git_status_color {
   local git_status="$(git status 2> /dev/null)"
 
-  if [[ ! $git_status =~ "working tree clean" ]]; then
+  if [[ $git_status =~ "untracked files present" ]]; then
+    echo $COLOR_YELLOW
+  elif [[ ! $git_status =~ "working directory clean" ]]; then # nothing to commit, working directory clean
     echo $COLOR_RED
   elif [[ $git_status =~ "Your branch is ahead of" ]]; then
     echo $COLOR_BLUE
@@ -146,7 +148,7 @@ function colored_git_branch {
 function set_bash_prompt {
   PS1="\n"
   # timestamp
-  PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $COLOR_GREEN \h $COLOR_GREEN|"
+  PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $COLOR_RED \h $COLOR_GREEN|"
   # path
   PS1+=" $COLOR_CYAN\w"
   PS1+="\n"
