@@ -133,9 +133,9 @@ function git_status_color {
   elif [[ $git_status =~ "Your branch is behind" ]] || [[ $git_status =~ "different commits each" ]]; then
     echo $COLOR_YELLOW
   elif [[ $git_status =~ "untracked files present" ]]; then
-    echo $COLOR_GREEN
-  elif [[ $git_status =~ "nothing to commit" ]]; then
     echo $COLOR_GREEN_LIGHT
+  elif [[ $git_status =~ "nothing to commit" ]]; then
+    echo $COLOR_GREEN
   else
     echo $COLOR_OCHRE
   fi
