@@ -8,7 +8,7 @@ export EDITOR=vim
 alias reload='source ~/.bash_profile'
 alias grep='grep --color=auto'
 alias cdl='cd /opt/bytelife/logstack'
-if [ -e /etc/os-release ]; then # any linux
+if [ -f /etc/os-release ]; then # any linux
         alias ls='ls --color'
 else # OS X color coding
         alias ls='ls -G'
@@ -104,25 +104,35 @@ function explain {
 }
 
 ### 1337 PS1 PROMPT ###
-COLOR_CYAN="\[\033[0;36m\]"
 COLOR_RED="\[\033[0;31m\]"
-COLOR_YELLOW="\[\033[0;33m\]"
+COLOR_RED_BOLD="\[\033[1;31m\]"
 COLOR_GREEN="\[\033[0;32m\]"
-COLOR_OCHRE="\[\033[38;5;95m\]"
-COLOR_BLUE="\[\033[0;94m\]"
+COLOR_GREEN_LIGHT="\[\033[0;92m\]"
+COLOR_YELLOW="\[\033[0;33m\]"
+COLOR_BLUE="\[\033[0;34m\]"
+COLOR_BLUE_LIGHT="\[\033[0;94m\]"
+COLOR_MAGENTA="\[\033[0;35m\]"
+COLOR_CYAN="\[\033[0;36m\]"
+COLOR_CYAN_LIGHT="\[\033[0;96m\]"
 COLOR_WHITE="\[\033[0;37m\]"
+
 COLOR_RESET="\[\033[0m\]"
+# 88/256 color terminals
+COLOR_OCHRE="\[\033[38;5;95m\]"
 
 function git_status_color {
   local git_status="$(git status 2> /dev/null)"
 
-   #   nothing to commit, working directory clean
-  if [[ ! $git_status =~ "working directory clean" ]]; then
+  if [[ $git_status =~ "Changes not staged" ]] ; then
+    echo $COLOR_RED_BOLD
+  elif [[ $git_status =~ "Changes to be committed" ]]; then
     echo $COLOR_RED
   elif [[ $git_status =~ "Your branch is ahead of" ]]; then
-    echo $COLOR_BLUE
+    echo $COLOR_CYAN
   elif [[ $git_status =~ "Your branch is behind" ]] || [[ $git_status =~ "different commits each" ]]; then
     echo $COLOR_YELLOW
+  elif [[ $git_status =~ "untracked files present" ]]; then
+    echo $COLOR_GREEN_LIGHT
   elif [[ $git_status =~ "nothing to commit" ]]; then
     echo $COLOR_GREEN
   else
