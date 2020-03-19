@@ -120,6 +120,15 @@ COLOR_RESET="\[\033[0m\]"
 # 88/256 color terminals
 COLOR_OCHRE="\[\033[38;5;95m\]"
 
+# load local variables and overrides (not part of git repo)
+LOCALVARS=localvars.sh
+if [ -f "$LOCALVARS" ]; then
+        . $LOCALVARS
+fi
+if [ -z "$HOST_COLOR" ]; then
+        HOST_COLOR=$COLOR_GREEN
+fi
+
 function git_status_color {
   local git_status="$(git status 2> /dev/null)"
 
@@ -157,7 +166,7 @@ function colored_git_branch {
 function set_bash_prompt {
   PS1="\n"
   # timestamp
-  PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $COLOR_RED \h $COLOR_GREEN|"
+  PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $HOST_COLOR \h $COLOR_GREEN|"
   # path
   PS1+=" $COLOR_CYAN\w"
   PS1+="\n"
