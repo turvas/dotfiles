@@ -22,6 +22,13 @@ alias eip='curl https://ifconfig.co'
 alias iip='ifconfig | grep "inet " | grep -v "127.0.0.1" | awk '"'"'{print $2}'"'"
 alias weather='curl wttr.in/tll'
 alias tag='ctags --tag-relative -R -f ./.git/tags .'
+alias ls='ls --color'
+alias cdl='cd /opt/bytelife/logstack'
+alias dlog="docker logs $1 2>&1"
+alias grep="grep --color"
+export STACKNAME=$(docker stack ls | grep Swarm | awk '{print $1}')
+echo "Logstack swarm stack name (STACKNAME): $STACKNAME"
+
 
 # Docker
 alias doc='docker'
@@ -141,7 +148,7 @@ function colored_git_branch {
 function set_bash_prompt {
   PS1="\n"
   # timestamp
-  PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $COLOR_GREEN \h $COLOR_GREEN|"
+  PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $COLOR_YELLOW \h $COLOR_GREEN|"
   # path
   PS1+=" $COLOR_CYAN\w"
   PS1+="\n"
