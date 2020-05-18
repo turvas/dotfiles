@@ -186,3 +186,7 @@ function set_bash_prompt {
 PROMPT_COMMAND=set_bash_prompt
 
 # 😃 🍕 🍔 ⚓ ☠  ♠️ ♣️ ♥️ ♦️ ⚜ 💊 ☠ 💎 ⛵️ 🐓 🔥 💥 👉 💩 🌎 🍍 🛡 💡 ✏️ 💾 ⚙ ☢ 🌀 🌐 ▶️ ➡️ 🀄️ 🔴 🔵
+
+# brew versions are newer, but less features
+# export PATH="/usr/local/opt/curl/bin:$PATH"
+# export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
