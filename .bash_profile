@@ -34,6 +34,7 @@ alias doc='docker'
 function dshell() { docker exec -it "$1" bash; }
 alias dpa='docker ps -a'
 alias dlog="docker logs $1 2>&1"
+#check, if running
 docker ps 2> /dev/null
 if [ $? -eq 0 ]; then # if docker is running
         export STACKNAME=$(docker stack ls | grep Swarm | awk '{print $1}')
