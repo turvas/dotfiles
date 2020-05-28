@@ -132,7 +132,7 @@ COLOR_RESET="\[\033[0m\]"
 COLOR_OCHRE="\[\033[38;5;95m\]"
 
 # load local variables and overrides (not part of git repo)
-LOCALVARS=localvars.sh
+LOCALVARS="~/localvars.sh"
 if [ -f "$LOCALVARS" ]; then
         . $LOCALVARS
 fi
