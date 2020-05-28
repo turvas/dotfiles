@@ -1,6 +1,7 @@
 #!/bin/bash
 # meant for onliner install, like
-# curl https://github.com/turvas/dotfiles/raw/master/install_from_wev.sh | sh
+# curl -L https://github.com/turvas/dotfiles/raw/master/install_from_web.sh | sh
+#
 which git > /dev/null
 if [ $? -gt 0 ]; then # missing
         OS=$(cat /etc/*release | grep '^ID=' | cut -c 4- | sed "s/\"//g")
