@@ -2,6 +2,13 @@
 bash/git/vim configuration dotfiles  (plus _safe_ install script).
 
 ## Install dotfiles
+
+with oneliner:
+```bash
+curl -L https://github.com/turvas/dotfiles/raw/master/install_from_web.sh | sh
+```
+
+or step by step
 ```bash
 git clone https://turvas@github.com/turvas/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
