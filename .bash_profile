@@ -1,6 +1,8 @@
 # Default editor is vi which breaks things like crontab
 export EDITOR=vim
 
+. ~/.bashrc
+
 # For Java installed via Homebrew
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 
