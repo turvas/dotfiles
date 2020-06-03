@@ -36,6 +36,10 @@ alias doc='docker'
 function dshell() { docker exec -it "$1" bash; }
 alias dpa='docker ps -a'
 alias dlog="docker logs $1 2>&1"
+# vna cetral auth
+if [ $USER == 'kalev.k' ]; then
+        alias docker='sudo -i /usr/bin/docker'
+fi
 #check, if running
 docker ps 1> /dev/null
 if [ $? -eq 0 ]; then # if docker is running
@@ -44,10 +48,6 @@ if [ $? -eq 0 ]; then # if docker is running
                 export STACKNAME=$(echo $RESP | grep Swarm | awk '{print $1}')
                 echo "Logstack swarm name (STACKNAME): $STACKNAME"
         fi
-fi
-# vna cetral auth
-if [ $USER == 'kalev.k' ]; then
-        alias docker='sudo -i /usr/bin/docker'
 fi
 # OSX
 alias off='pmset displaysleepnow'
