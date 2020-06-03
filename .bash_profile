@@ -37,9 +37,9 @@ function dshell() { docker exec -it "$1" bash; }
 alias dpa='docker ps -a'
 alias dlog="docker logs $1 2>&1"
 # vna cetral auth
-if [ $USER == 'kalev.k' ]; then
-        alias docker='sudo -i /usr/bin/docker'
-fi
+#if [ $USER == 'uus.nimekuju' ]; then
+#        alias docker='sudo -i /usr/bin/docker'
+#fi
 #check, if running
 docker ps 1> /dev/null
 if [ $? -eq 0 ]; then # if docker is running
