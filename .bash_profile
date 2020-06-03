@@ -37,12 +37,17 @@ function dshell() { docker exec -it "$1" bash; }
 alias dpa='docker ps -a'
 alias dlog="docker logs $1 2>&1"
 #check, if running
-docker ps 2> /dev/null
+docker ps 1> /dev/null
 if [ $? -eq 0 ]; then # if docker is running
-        export STACKNAME=$(docker stack ls | grep Swarm | awk '{print $1}')
-        if [ -n "STACKNAME" ]; then
+        RESP=`docker stack ls 2> /dev/null`
+        if [ $? -eq 0 ]; then
+                export STACKNAME=$(echo $RESP | grep Swarm | awk '{print $1}')
                 echo "Logstack swarm name (STACKNAME): $STACKNAME"
         fi
+fi
+# vna cetral auth
+if [ $USER == 'kalev.k' ]; then
+        alias docker='sudo -i /usr/bin/docker'
 fi
 # OSX
 alias off='pmset displaysleepnow'
