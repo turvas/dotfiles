@@ -44,8 +44,9 @@ alias dlog="docker logs $1 2>&1"
 docker ps 1> /dev/null
 if [ $? -eq 0 ]; then # if docker is running
         RESP=`docker stack ls 2> /dev/null`
+        #echo $RESP
         if [ $? -eq 0 ]; then
-                export STACKNAME=$(echo $RESP | grep Swarm | awk '{print $1}')
+                export STACKNAME=$(echo "$RESP" | grep Swarm | awk '{print $1}')
                 echo "Logstack swarm name (STACKNAME): $STACKNAME"
         fi
 fi
