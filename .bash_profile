@@ -138,11 +138,11 @@ COLOR_RESET="\[\033[0m\]"
 COLOR_OCHRE="\[\033[38;5;95m\]"
 
 # load local variables and overrides (not part of git repo)
-LOCALVARS="~/localvars.sh"
-if [ -f "$LOCALVARS" ]; then
-        . $LOCALVARS
+LOCALVARS=~/localvars.sh
+if [ -f $LOCALVARS ]; then
+        source $LOCALVARS
 fi
-if [ -z "$HOST_COLOR" ]; then
+if [ -z ${HOST_COLOR+x} ]; then # if variable is set
         HOST_COLOR=$COLOR_GREEN
 fi
 
