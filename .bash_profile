@@ -40,8 +40,8 @@ alias dlog="docker logs $1 2>&1"
 #if [ $USER == 'uus.nimekuju' ]; then
 #        alias docker='sudo -i /usr/bin/docker'
 #fi
-#check, if running
-docker ps 1> /dev/null
+#check, if exists and running
+docker ps > /dev/null 2>&1
 if [ $? -eq 0 ]; then # if docker is running
         RESP=`docker stack ls 2> /dev/null`
         #echo $RESP
