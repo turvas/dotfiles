@@ -5,7 +5,7 @@ bash/git/vim configuration dotfiles  (plus _safe_ install script).
 
 with oneliner:
 ```bash
-curl -L https://github.com/turvas/dotfiles/raw/master/install_from_web.sh | sh
+curl -sSL https://github.com/turvas/dotfiles/raw/master/install_from_web.sh | sh
 ```
 
 or step by step
