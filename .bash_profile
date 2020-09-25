@@ -1,6 +1,8 @@
 # Default editor is vi which breaks things like crontab
 export EDITOR=vim
 
+. ~/.bashrc
+
 # For Java installed via Homebrew
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 
@@ -8,7 +10,7 @@ export EDITOR=vim
 alias reload='source ~/.bash_profile'
 alias grep='grep --color=auto'
 alias cdl='cd /opt/bytelife/logstack'
-if [ -f /etc/os-release ]; then # any linux
+if [ -f /etc/os-release ] || [[ $HOSTNAME =~ radicenter ]]; then # any linux
         alias ls='ls --color'
 else # OS X color coding
         alias ls='ls -G'
@@ -27,19 +29,27 @@ alias eip='curl https://ifconfig.co'
 alias iip='ifconfig | grep "inet " | grep -v "127.0.0.1" | awk '"'"'{print $2}'"'"
 alias weather='curl wttr.in/tll'
 alias tag='ctags --tag-relative -R -f ./.git/tags .'
-alias ls='ls --color'
-alias cdl='cd /opt/bytelife/logstack'
-alias dlog="docker logs $1 2>&1"
-alias grep="grep --color"
-export STACKNAME=$(docker stack ls | grep Swarm | awk '{print $1}')
-echo "Logstack swarm stack name (STACKNAME): $STACKNAME"
-
+alias gdiff='git diff --color-words'
 
 # Docker
 alias doc='docker'
 function dshell() { docker exec -it "$1" bash; }
 alias dpa='docker ps -a'
-
+alias dlog="docker logs $1 2>&1"
+# vna cetral auth
+#if [ $USER == 'uus.nimekuju' ]; then
+#        alias docker='sudo -i /usr/bin/docker'
+#fi
+#check, if exists and running
+docker ps > /dev/null 2>&1
+if [ $? -eq 0 ]; then # if docker is running
+        RESP=`docker stack ls 2> /dev/null`
+        #echo $RESP
+        if [ $? -eq 0 ]; then
+                export STACKNAME=$(echo "$RESP" | grep Swarm | awk '{print $1}')
+                echo "Logstack swarm name (STACKNAME): $STACKNAME"
+        fi
+fi
 # OSX
 alias off='pmset displaysleepnow'
 alias index='sudo mdutil -E /'
@@ -128,11 +138,11 @@ COLOR_RESET="\[\033[0m\]"
 COLOR_OCHRE="\[\033[38;5;95m\]"
 
 # load local variables and overrides (not part of git repo)
-LOCALVARS=localvars.sh
-if [ -f "$LOCALVARS" ]; then
-        . $LOCALVARS
+LOCALVARS=~/localvars.sh
+if [ -f $LOCALVARS ]; then
+        source $LOCALVARS
 fi
-if [ -z "$HOST_COLOR" ]; then
+if [ -z ${HOST_COLOR+x} ]; then # if variable is set
         HOST_COLOR=$COLOR_GREEN
 fi
 
@@ -184,4 +194,26 @@ function set_bash_prompt {
 
 PROMPT_COMMAND=set_bash_prompt
 
+# temp web storage transfer.sh
+transfer() { 
+        if [ $# -eq 0 ]; then 
+                echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; 
+                return 1; 
+        fi
+        tmpfile=$( mktemp -t transferXXX ); 
+        if tty -s; then 
+                basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); 
+                curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; 
+        else 
+                curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; 
+        fi; 
+        cat $tmpfile; 
+        rm -f $tmpfile; 
+}
+
+
 # 😃 🍕 🍔 ⚓ ☠  ♠️ ♣️ ♥️ ♦️ ⚜ 💊 ☠ 💎 ⛵️ 🐓 🔥 💥 👉 💩 🌎 🍍 🛡 💡 ✏️ 💾 ⚙ ☢ 🌀 🌐 ▶️ ➡️ 🀄️ 🔴 🔵
+
+# brew versions are newer, but less features
+# export PATH="/usr/local/opt/curl/bin:$PATH"
+# export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
