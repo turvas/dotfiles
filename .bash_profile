@@ -173,7 +173,7 @@ function colored_git_branch {
 function set_bash_prompt {
   PS1="\n"
   # timestamp
-  PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $HOST_COLOR \h $COLOR_GREEN|"
+  PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $HOST_COLOR \H $COLOR_GREEN|"
   # path
   PS1+=" $COLOR_CYAN\w"
   PS1+="\n"
