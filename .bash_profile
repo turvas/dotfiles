@@ -6,6 +6,19 @@ export EDITOR=vim
 # For Java installed via Homebrew
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 
+alive() {
+    while (true); do
+        d=`date`
+        CL_CR='\e['
+        if ping -c 1 -W 1 "$1" > /dev/null; then
+                echo -e "$CL_CR$d $1 is alive"
+        else
+                echo -e "$CL_CR$d $1 is pining for the fjords"
+        fi
+        sleep 1
+    done
+}
+
 ### ALIASES ###
 alias reload='source ~/.bash_profile'
 alias grep='grep --color=auto'
@@ -18,7 +31,7 @@ fi
 alias l='ls -lhaF'
 alias ll='ls -lhaFrt'
 alias h='history'
-alias gh='history | grep -i $1'
+alias hg='history | grep -i $1'
 alias psef='ps -ef | head -1;  ps -ef | grep -v grep | grep --color=auto -i $1'
 alias d='GLOBIGNORE=.; du -sch *; GLOBIGNORE=; shopt -u dotglob nullglob'
 function f() { find . -iname "*$1*" | grep $1; }
