@@ -7,14 +7,24 @@ export EDITOR=vim
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 
 alive() {
+    LAST_RET=0  # assume ok
     while (true); do
         d=`date`
-        CL_CR='\e['
-        if ping -c 1 -W 1 "$1" > /dev/null; then
-                echo -e "$CL_CR$d $1 is alive"
+        ping -c 1 -W 1 "$1" > /dev/null
+        RET=$?
+        #echo RET=$RET , LAST_RET=$LAST_RET
+        if [ $RET -eq $LAST_RET ]; then     # same as from pevious time
+                CTR='\r\033[1A\033[0K'             # clear line
         else
-                echo -e "$CL_CR$d $1 is pining for the fjords"
+                CTR=                        # no clearing, normal newline
         fi
+#        echo $CTR
+        if [ $RET -eq 0 ]; then
+                echo -e "$CTR $d $1 is alive"
+        else
+                echo -e "$CTR $d $1 is pining for the fjords"
+        fi
+        LAST_RET=$RET
         sleep 1
     done
 }
