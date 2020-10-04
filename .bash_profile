@@ -186,6 +186,7 @@ function set_bash_prompt {
   PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $HOST_COLOR \h $COLOR_GREEN|"
   # path
   PS1+=" $COLOR_CYAN\w"
+  if [ -n "$VIRTUAL_ENV" ]; then PS1+=" (venv)"; fi
   PS1+="\n"
   # git branch/status
   PS1+="$(colored_git_branch)"
