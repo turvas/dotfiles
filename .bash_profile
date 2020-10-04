@@ -6,6 +6,29 @@ export EDITOR=vim
 # For Java installed via Homebrew
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 
+alive() {
+    LAST_RET=0  # assume ok
+    while (true); do
+        d=`date`
+        ping -c 1 -W 1 "$1" > /dev/null
+        RET=$?
+        #echo RET=$RET , LAST_RET=$LAST_RET
+        if [ $RET -eq $LAST_RET ]; then     # same as from pevious time
+                CTR='\r\033[1A\033[0K'             # clear line
+        else
+                CTR=                        # no clearing, normal newline
+        fi
+#        echo $CTR
+        if [ $RET -eq 0 ]; then
+                echo -e "$CTR $d $1 is alive"
+        else
+                echo -e "$CTR $d $1 is pining for the fjords"
+        fi
+        LAST_RET=$RET
+        sleep 1
+    done
+}
+
 ### ALIASES ###
 alias reload='source ~/.bash_profile'
 alias grep='grep --color=auto'
@@ -18,7 +41,7 @@ fi
 alias l='ls -lhaF'
 alias ll='ls -lhaFrt'
 alias h='history'
-alias gh='history | grep -i $1'
+alias hg='history | grep -i $1'
 alias psef='ps -ef | head -1;  ps -ef | grep -v grep | grep --color=auto -i $1'
 alias d='GLOBIGNORE=.; du -sch *; GLOBIGNORE=; shopt -u dotglob nullglob'
 function f() { find . -iname "*$1*" | grep $1; }
@@ -183,7 +206,7 @@ function colored_git_branch {
 function set_bash_prompt {
   PS1="\n"
   # timestamp
-  PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $HOST_COLOR \h $COLOR_GREEN|"
+  PS1+="$COLOR_GREEN|$COLOR_BLUE\t \u @ $HOST_COLOR \H $COLOR_GREEN|"
   # path
   PS1+=" $COLOR_CYAN\w"
   if [ -n "$VIRTUAL_ENV" ]; then PS1+=" (venv)"; fi
