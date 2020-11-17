@@ -213,7 +213,7 @@ function set_bash_prompt {
   PS1+="\n"
   # git branch/status
   PS1+="$(colored_git_branch)"
-  PS1+="🍕 $COLOR_RESET "
+  PS1+="> $COLOR_RESET "
 }
 
 PROMPT_COMMAND=set_bash_prompt
