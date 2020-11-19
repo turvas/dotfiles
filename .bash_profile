@@ -53,6 +53,7 @@ alias iip='ifconfig | grep "inet " | grep -v "127.0.0.1" | awk '"'"'{print $2}'"
 alias weather='curl wttr.in/tll'
 alias tag='ctags --tag-relative -R -f ./.git/tags .'
 alias gdiff='git diff --color-words'
+alias prod_system='echo "HOST_COLOR=\$COLOR_RED" >> ~/localvars.sh'
 
 # Docker
 alias doc='docker'
