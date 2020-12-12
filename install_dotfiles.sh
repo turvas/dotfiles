@@ -31,6 +31,15 @@ ln -sn ${PWD}/kalev.vim ~/.vim/colors/kalev.vim
 ln -sn ${PWD}/darkspace.vim ~/.vim/colors/darkspace.vim
 
 # Install Git completion from the official Git repo
+which wget > /dev/null
+if [ $? -gt 0 ]; then # missing
+        OS=$(cat /etc/*release | grep '^ID=' | cut -c 4- | sed "s/\"//g")
+        if [ $OS == 'ubuntu' ]; then
+                sudo apt -y install wget
+        else
+                sudo yum -y install wget
+        fi
+fi
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 
 echo -e "Run the following command to complete installation:\nsource ~/.bash_profile"
