@@ -5,10 +5,11 @@
 which git > /dev/null
 if [ $? -gt 0 ]; then # missing
         OS=$(cat /etc/*release | grep '^ID=' | cut -c 4- | sed "s/\"//g")
-        if [ $OS == 'ubuntu' ]; then
-                sudo apt install git
+	echo Installing for: $OS
+	if [ "$OS" = "ubuntu" ]; then
+                sudo apt install -y git
         else
-                sudo yum install git
+                sudo yum install -y git
         fi
 fi
 git clone https://turvas@github.com/turvas/dotfiles.git ~/.dotfiles
