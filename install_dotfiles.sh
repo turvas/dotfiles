@@ -34,7 +34,7 @@ ln -sn ${PWD}/darkspace.vim ~/.vim/colors/darkspace.vim
 which wget > /dev/null
 if [ $? -gt 0 ]; then # missing
         OS=$(cat /etc/*release | grep '^ID=' | cut -c 4- | sed "s/\"//g")
-        if [ $OS == 'ubuntu' ]; then
+        if [ $OS == 'ubuntu' ] || [ $OS == 'debian' ]; then
                 sudo apt -y install wget
         else
                 sudo yum -y install wget
