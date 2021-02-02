@@ -6,7 +6,8 @@ which git > /dev/null
 if [ $? -gt 0 ]; then # missing
         OS=$(cat /etc/*release | grep '^ID=' | cut -c 4- | sed "s/\"//g")
         echo Installing for: $OS
-        if [ "$OS" = "ubuntu" ]; then
+        if [ "$OS" = "ubuntu" ] || [ "$OS" = "debian" ]; then
+                sudo apt update
                 sudo apt install -y git
         else
                 sudo yum install -y git
