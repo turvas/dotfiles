@@ -4,12 +4,17 @@
 #
 which git > /dev/null
 if [ $? -gt 0 ]; then # missing
-        OS=$(cat /etc/*release | grep '^ID=' | cut -c 4- | sed "s/\"//g")
-        echo Installing for: $OS
+	OS=`uname | awk '{print $1}'`
+	if [ "$OS" = "Linux" ]; then	# need more exact flavor
+        	OS=$(cat /etc/*release | grep '^ID=' | cut -c 4- | sed "s/\"//g")
+	fi
+	echo Installing for: $OS
         if [ "$OS" = "ubuntu" ] || [ "$OS" = "debian" ]; then
                 sudo apt update
                 sudo apt install -y git
-        else
+	elif [ "$OS" = "FreeBSD" ]; then
+		echo y | sudo pkg install git
+        else	# centos, fedore rhel
                 sudo yum install -y git
         fi
 fi
