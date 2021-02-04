@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #some original files may miss, and thus on mv whole script is interrupted
 #set -e 
@@ -33,13 +33,18 @@ ln -sn ${PWD}/darkspace.vim ~/.vim/colors/darkspace.vim
 # Install Git completion from the official Git repo
 which wget > /dev/null
 if [ $? -gt 0 ]; then # missing
-        OS=$(cat /etc/*release | grep '^ID=' | cut -c 4- | sed "s/\"//g")
+	OS=`uname | awk '{print $1}'`
+	if [ "$OS" = "Linux" ]; then	# need more exact flavor
+        	OS=$(cat /etc/*release | grep '^ID=' | cut -c 4- | sed "s/\"//g")
+	fi
         if [ $OS == 'ubuntu' ] || [ $OS == 'debian' ]; then
                 sudo apt -y install wget
+        elif [ "$OS" = "FreeBSD" ]; then
+		echo y | sudo pkg install wget
         else
                 sudo yum -y install wget
         fi
 fi
-wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
+wget --no-check-certificate https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 
 echo -e "Run the following command to complete installation:\nsource ~/.bash_profile"
