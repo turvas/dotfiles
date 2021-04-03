@@ -16,6 +16,7 @@ mv ~/.vimrc ~/.vimrc.$NOW
 mv ~/.gitconfig ~/.gitconfig.$NOW
 mv ~/.gitignore ~/.gitignore.$NOW
 mv ~/.bashrc ~/.bashrc.$NOW
+mv ~/.bash_aliases ~/.bash_aliases.$NOW
 #mv ~/.ctags ~/.ctags.$NOW
 
 # Create symlinks to repository dotfiles
@@ -24,6 +25,7 @@ ln -sn ${PWD}/.vimrc ~/.vimrc
 ln -sn ${PWD}/.gitconfig ~/.gitconfig
 ln -sn ${PWD}/.gitignore ~/.gitignore
 ln -sn ${PWD}/.bashrc ~/.bashrc
+ln -sn ${PWD}/.bash_aliases ~/.bash_aliases
 #ln -sn ${PWD}/.ctags ~/.ctags
 
 mkdir -p ~/.vim
