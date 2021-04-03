@@ -15,6 +15,7 @@ mv ~/.bash_profile ~/.bash_profile.$NOW
 mv ~/.vimrc ~/.vimrc.$NOW
 mv ~/.gitconfig ~/.gitconfig.$NOW
 mv ~/.gitignore ~/.gitignore.$NOW
+mv ~/.bashrc ~/.bashrc.$NOW
 #mv ~/.ctags ~/.ctags.$NOW
 
 # Create symlinks to repository dotfiles
@@ -22,6 +23,7 @@ ln -sn ${PWD}/.bash_profile ~/.bash_profile
 ln -sn ${PWD}/.vimrc ~/.vimrc
 ln -sn ${PWD}/.gitconfig ~/.gitconfig
 ln -sn ${PWD}/.gitignore ~/.gitignore
+ln -sn ${PWD}/.bashrc ~/.bashrc
 #ln -sn ${PWD}/.ctags ~/.ctags
 
 mkdir -p ~/.vim
