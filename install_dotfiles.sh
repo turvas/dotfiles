@@ -7,26 +7,24 @@
 
 cd "${0%/*}"
 
-# Move and save existing configs
 NOW=`date "+%Y%m%d%H%M%S"`
+# rename (or unlink) to keep existing configs and link new ones
+function link_file {
+        FILE=$1
+        if [ -L $FILE ]; then   # symbolik link to be removed (also -h)
+                unlink $FILE
+        fi
+        if [ -f $FILE ]; then
+                mv ~/$FILE ~/$FILE.$NOW
+        fi
+        ln -sn ${PWD}/$FILE ~/$FILE
+}
 
-# On Linux you can add the "mv --backup=t" flag for even more safety, but it's not available on OSX :(
-mv ~/.bash_profile ~/.bash_profile.$NOW
-mv ~/.vimrc ~/.vimrc.$NOW
-mv ~/.gitconfig ~/.gitconfig.$NOW
-mv ~/.gitignore ~/.gitignore.$NOW
-mv ~/.bashrc ~/.bashrc.$NOW
-mv ~/.bash_aliases ~/.bash_aliases.$NOW
-#mv ~/.ctags ~/.ctags.$NOW
-
-# Create symlinks to repository dotfiles
-ln -sn ${PWD}/.bash_profile ~/.bash_profile
-ln -sn ${PWD}/.vimrc ~/.vimrc
-ln -sn ${PWD}/.gitconfig ~/.gitconfig
-ln -sn ${PWD}/.gitignore ~/.gitignore
-ln -sn ${PWD}/.bashrc ~/.bashrc
-ln -sn ${PWD}/.bash_aliases ~/.bash_aliases
-#ln -sn ${PWD}/.ctags ~/.ctags
+FILES=".bash_profile .bashrc .bash_aliases .vimrc .gitconfig .gitignore"
+for file in $FILES; do
+        echo Linking file $file
+        link_file $file
+done
 
 mkdir -p ~/.vim
 mkdir -p ~/.vim/colors
@@ -51,4 +49,4 @@ if [ $? -gt 0 ]; then # missing
 fi
 wget --no-check-certificate https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 
-echo -e "Run the following command to complete installation:\nsource ~/.bash_profile"
+echo -e "Run the following command to activate it:\nsource ~/.bash_profile"
