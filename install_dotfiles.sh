@@ -11,7 +11,7 @@ NOW=`date "+%Y%m%d%H%M%S"`
 # rename (or unlink) to keep existing configs and link new ones
 function link_file {
         FILE=$1
-        if [ -L $FILE ]; then   # symbolik link to be removed (also -h)
+        if [ -L $FILE ]; then   # symbolik link to be removed (also -h), to enable reinstall
                 unlink $FILE
         fi
         if [ -f $FILE ]; then
@@ -26,11 +26,11 @@ for file in $FILES; do
         link_file $file
 done
 
-mkdir -p ~/.vim
 mkdir -p ~/.vim/colors
-ln -sn ${PWD}/kalev.vim ~/.vim/colors/kalev.vim
-# curl -O https://raw.githubusercontent.com/niklas-8/vim-darkspace/master/colors/darkspace.vim
-ln -sn ${PWD}/darkspace.vim ~/.vim/colors/darkspace.vim
+[ ! -L ~/.vim/colors/kalev.vim ] && ln -sn ${PWD}/kalev.vim ~/.vim/colors/kalev.vim
+# no need to load darkspace, exist in local repo
+#curl -O https://raw.githubusercontent.com/niklas-8/vim-darkspace/master/colors/darkspace.vim
+[ ! -L ~/.vim/colors/darkspace.vim ] && ln -sn ${PWD}/darkspace.vim ~/.vim/colors/darkspace.vim
 
 # Install Git completion from the official Git repo
 which wget > /dev/null
