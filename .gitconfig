@@ -1,5 +1,5 @@
 [core]
-  pager = less -x4
+	pager = diff-so-fancy | less --tabs=4 -RFX
   editor = /usr/bin/vim
   excludesfile = ~/.gitignore
   autocrlf = input
@@ -61,3 +61,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[interactive]
+	diffFilter = diff-so-fancy --patch
