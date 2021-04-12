@@ -39,9 +39,9 @@ function f() { find . -iname "*$1*" | grep $1; }
 alias eip='curl https://ifconfig.co'
 # alias iip='ifconfig | grep -o "inet \(192\.168\.\d\+\.\d\+\)" | grep -o "192\.168\.\d\+\.\d\+"'
 #alias iip='ifconfig | grep "inet " | tail -1 | cut -d " " -f2'
-which ipconfig 2> /dev/null
+which ifconfig > /dev/null
 if [ $? -eq 0 ]; then
-        alias iip='ipconfig | grep "inet " | grep -v "127.0.0.1" | awk '"'"'{print $2}'"'"
+        alias iip='ifconfig | grep "inet " | grep -v "127.0.0.1" | awk '"'"'{print $2}'"'"
 else
         alias iip='ip addr | grep "inet " | grep -v "127.0.0.1" | awk '"'"'{print $2}'"'"
 fi
