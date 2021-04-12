@@ -37,6 +37,7 @@ if [ -f /etc/os-release ] || [[ $HOSTNAME =~ radicenter ]]; then # any linux
         alias ls='ls --color'
 else # OS X color coding
         alias ls='ls -G'
+        alias tw='open -a /Applications/TextWrangler.app'
 fi
 alias l='ls -lhaF'
 alias ll='ls -lhaFrt'
