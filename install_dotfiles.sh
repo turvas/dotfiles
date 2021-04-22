@@ -55,4 +55,10 @@ if [ $? -gt 0 ]; then # missing
 fi
 wget --no-check-certificate https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash
 
+cd ~
+git clone https://github.com/so-fancy/diff-so-fancy.git
+mkdir -p .local/bin/lib
+cp diff-so-fancy/diff-so-fancy .local/bin/
+cp diff-so-fancy/lib/DiffHighlight.pm .local/bin/lib/DiffHighlight.pm
+
 echo -e "Run the following command to activate it:\nsource ~/.bash_profile"
