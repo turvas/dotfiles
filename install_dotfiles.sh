@@ -61,4 +61,9 @@ mkdir -p .local/bin/lib
 cp diff-so-fancy/diff-so-fancy .local/bin/
 cp diff-so-fancy/lib/DiffHighlight.pm .local/bin/lib/DiffHighlight.pm
 
+# preps for vim docker-safe
+mkdir -p ~/.vim/backup
+mkdir -p ~/.vim/swap
+mkdir -p ~/.vim/undo
+
 echo -e "Run the following command to activate it:\nsource ~/.bash_profile"
