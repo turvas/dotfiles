@@ -37,6 +37,7 @@ alias psef='ps -ef | head -1;  ps -ef | grep -v grep | grep --color=auto -i $1'
 alias d='GLOBIGNORE=.; du -sch *; GLOBIGNORE=; shopt -u dotglob nullglob'
 function f() { find . -iname "*$1*" | grep $1; }
 alias eip='curl https://ifconfig.co'
+alias eip2='curl -sS https://api.myip.com | jq .ip | sed "s/\"//g"'
 # alias iip='ifconfig | grep -o "inet \(192\.168\.\d\+\.\d\+\)" | grep -o "192\.168\.\d\+\.\d\+"'
 #alias iip='ifconfig | grep "inet " | tail -1 | cut -d " " -f2'
 which ifconfig > /dev/null
