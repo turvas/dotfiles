@@ -47,7 +47,7 @@ else
         alias iip='ip addr | grep "inet " | grep -v "127.0.0.1" | awk '"'"'{print $2}'"'"
 fi
 alias weather='curl wttr.in/tll'
-alias tag='ctags --tag-relative -R -f ./.git/tags .'
+#alias tag='ctags --tag-relative -R -f ./.git/tags .'
 alias gdiff='git diff --color-words'
 alias prod_system='echo "HOST_COLOR=\$COLOR_RED" >> ~/localvars.sh'
 
@@ -61,10 +61,9 @@ function dshell() { docker exec -it "$1" bash; }
 alias dpa='docker ps -a'
 alias dlog="docker logs $1 2>&1"
 
-
 # OSX
 alias off='pmset displaysleepnow'
-alias index='sudo mdutil -E /'
+#alias index='sudo mdutil -E /'
 
 # LINUX
 # alias l='ls -lhaF --color=auto'
