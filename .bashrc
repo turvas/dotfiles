@@ -78,6 +78,8 @@ fi
 # host alive checker with only changes shown
 alive() {
     LAST_RET=0  # assume ok
+    TOTAL_COUNT=0
+    ALIVE_COUNT=0
     while (true); do
         d=`date`
         ping -c 1 -W 1 "$1" > /dev/null
@@ -89,14 +91,17 @@ alive() {
                 CTR=                        # no clearing, normal newline
         fi
 #        echo $CTR
+        TOTAL_COUNT=$((TOTAL_COUNT + 1))
         if [ $RET -eq 0 ]; then
-                echo -e "$CTR $d $1 is alive"
+                ALIVE_COUNT=$((ALIVE_COUNT + 1))
+                echo -e "$CTR $d $1 is alive ($ALIVE_COUNT / $TOTAL_COUNT)"
         else
                 echo -e "$CTR $d $1 is pining for the fjords"
         fi
         LAST_RET=$RET
         sleep 1
     done
+    echo Alive summary: $ALIVE_COUNT / $TOTAL_COUNT
 }
 
 ### EXPLAINSHELL ###
