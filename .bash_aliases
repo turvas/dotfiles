@@ -46,7 +46,7 @@ alias eip='curl https://ifconfig.co'
 alias eip2='curl -sS https://api.myip.com | jq .ip | sed "s/\"//g"'
 # alias iip='ifconfig | grep -o "inet \(192\.168\.\d\+\.\d\+\)" | grep -o "192\.168\.\d\+\.\d\+"'
 #alias iip='ifconfig | grep "inet " | tail -1 | cut -d " " -f2'
-which ifconfig > /dev/null
+which ifconfig &> /dev/null
 if [ $? -eq 0 ]; then
         alias iip='ifconfig | grep "inet " | grep -v "127.0.0.1" | awk '"'"'{print $2}'"'"
 else
