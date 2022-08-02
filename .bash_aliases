@@ -38,6 +38,7 @@ alias d='GLOBIGNORE=.; du -sch *; GLOBIGNORE=; shopt -u dotglob nullglob'
 function f() { find . -iname "*$1*" | grep $1; }
 alias eip='curl https://ifconfig.co'
 alias eip2='curl -sS https://api.myip.com | jq .ip | sed "s/\"//g"'
+alias eip4='dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com | sed "s/\"//g"'
 # alias iip='ifconfig | grep -o "inet \(192\.168\.\d\+\.\d\+\)" | grep -o "192\.168\.\d\+\.\d\+"'
 #alias iip='ifconfig | grep "inet " | tail -1 | cut -d " " -f2'
 which ifconfig > /dev/null
@@ -54,6 +55,11 @@ alias prod_system='echo "HOST_COLOR=\$COLOR_RED" >> ~/localvars.sh'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+function seecert () {
+  nslookup $1
+  (openssl s_client -showcerts -servername $1 -connect $1:443 <<< "Q" | openssl x509 -text | grep -iA2 "Validity")
+}
 
 # Docker
 alias doc='docker'

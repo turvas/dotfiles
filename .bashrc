@@ -80,6 +80,7 @@ alive() {
     LAST_RET=0  # assume ok
     TOTAL_COUNT=0
     ALIVE_COUNT=0
+    FAILED_COUNT=0
     while (true); do
         d=`date`
         ping -c 1 -W 1 "$1" > /dev/null
@@ -95,8 +96,10 @@ alive() {
         if [ $RET -eq 0 ]; then
                 ALIVE_COUNT=$((ALIVE_COUNT + 1))
                 echo -e "$CTR $d $1 is alive ($ALIVE_COUNT / $TOTAL_COUNT)"
+                FAILED_COUNT=0
         else
-                echo -e "$CTR $d $1 is pining for the fjords"
+                FAILED_COUNT=$(( FAILED_COUNT + 1 ))
+                echo -e "$CTR $d $1 is pining for the fjords: $FAILED_COUNT"
         fi
         LAST_RET=$RET
         sleep 1
