@@ -1,5 +1,5 @@
 [core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = diff-so-fancy | less --tabs=4 -RFX
   editor = /usr/bin/vim
   excludesfile = ~/.gitignore
   autocrlf = input
@@ -13,8 +13,8 @@
   ui = true
   pager = true
 [user]
-	email = kalev@bytelife.ee
-	name = kalev kuusik
+	email = turvas@gmail.com
+	name = kalev
 [alias]
   dif = diff
   dc = diff --cached
@@ -63,3 +63,5 @@
 	required = true
 [interactive]
 	diffFilter = diff-so-fancy --patch
+[credential]
+	helper = store
