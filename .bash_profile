@@ -9,24 +9,23 @@ export EDITOR=vim
 . ~/.bashrc
 
 ### PATH ### , added ansible path
-export PATH=~/.local/bin:/Users/kalev/Library/Python/3.8/bin:$PATH
-eval "$(/opt/homebrew/bin/brew shellenv)"
+OS=`uname`
+if [ $OS != 'Darwin' ]; then    # Linux
+        export PATH=~/.local/bin:$PATH
+else    # Mac
+        export PATH=~/.local/bin:/Users/kalev/Library/Python/3.8/bin:$PATH
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+        ##
+        # Your previous /Users/kalev/.bash_profile file was backed up as /Users/kalev/.bash_profile.macports-saved_2022-03-31_at_15:36:51
+        ##
+        # MacPorts Installer addition on 2022-03-31_at_15:36:51: adding an appropriate PATH variable for use with MacPorts.
+        export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
-##
-# Your previous /Users/kalev/.bash_profile file was backed up as /Users/kalev/.bash_profile.macports-saved_2022-03-31_at_15:36:51
-##
+        # MacPorts Installer addition on 2022-03-31_at_15:36:51: adding an appropriate MANPATH variable for use with MacPorts.
+        export MANPATH="/opt/local/share/man:$MANPATH"
 
-# MacPorts Installer addition on 2022-03-31_at_15:36:51: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
+        # ansible fork jaoks MacOS peal
+        export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
-
-# MacPorts Installer addition on 2022-03-31_at_15:36:51: adding an appropriate MANPATH variable for use with MacPorts.
-export MANPATH="/opt/local/share/man:$MANPATH"
-# Finished adapting your MANPATH environment variable for use with MacPorts.
-
-# ansible fork jaoks MacOS peal
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
+        test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+fi
