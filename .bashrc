@@ -1,3 +1,4 @@
+#
 # ~/.bashrc: executed by bash(1) for non-login interactive shells, like GNU terminal, included by .bash_profile.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 
@@ -36,6 +37,10 @@ if [ $? -eq 0 ]; then # if docker is running
                 echo "Logstack swarm name (STACKNAME): $STACKNAME"
         fi
 fi
+
+# for ssh
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Change default ls directory color to be readable on dark background
 # (OSX)
@@ -226,3 +231,4 @@ transfer() {
 # brew versions are newer, but less features
 # export PATH="/usr/local/opt/curl/bin:$PATH"
 # export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
