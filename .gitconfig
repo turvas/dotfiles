@@ -1,7 +1,7 @@
 [core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = diff-so-fancy | less --tabs=4 -RFX
   editor = /usr/bin/vim
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/kalev/.gitignore_global
   autocrlf = input
 [push]
   default = simple
@@ -13,8 +13,9 @@
   ui = true
   pager = true
 [user]
-	email = kalev@bytelife.ee
-	name = kalev kuusik
+  email = kalev.kuusik@bytelife.com
+  name = Kalev Kuusik
+
 [alias]
   dif = diff
   dc = diff --cached
@@ -49,10 +50,10 @@
 [remote "origin"]
   prune = true
 [difftool "sourcetree"]
-	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
 	template = /Users/kalev/.stCommitMsg
@@ -63,3 +64,5 @@
 	required = true
 [interactive]
 	diffFilter = diff-so-fancy --patch
+[credential]
+	helper = store

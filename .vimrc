@@ -15,6 +15,6 @@ let g:indentLine_char = '⦙'
 " and swapping causes inode change and breaks update in container
 " @see https://stackoverflow.com/a/15317146/842480
 " IMPORTANT: directories must exist, so create them!
-:set backupdir=~/.vim/backup//
-:set directory=~/.vim/swap//
-:set undodir=~/.vim/undo//
+:set backupdir=~/.vim/backup/
+:set directory=~/.vim/swap/
+:set undodir=~/.vim/undo/
