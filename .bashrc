@@ -22,6 +22,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# fix for Fedora derivatives to handle ssh from MacOS, to avoid local related errors
+export LANGUAGE=en_GB.utf8
+export LC_ALL=en_GB.utf8
+export LC_CTYPE="utf8"
+export LANG=en_GB.utf8
+
 # For Java installed via Homebrew
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 
