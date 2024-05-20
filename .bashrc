@@ -39,6 +39,7 @@ if [ $? -eq 0 ]; then # if docker is running
 fi
 
 # for ssh
+#export LC_ALL=C.utf8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
@@ -86,9 +87,15 @@ alive() {
     TOTAL_COUNT=0
     ALIVE_COUNT=0
     FAILED_COUNT=0
+    if [ -z "$1" ]; then
+        TARGET=www.ee
+    else
+        TARGET=$1
+    fi
     while (true); do
         d=`date`
-        ping -c 1 -W 1 "$1" > /dev/null
+        # ping -c 1 -W 1 "$1" > /dev/null
+        RESPONSE=$(ping -c 2 -W 1 $TARGET)
         RET=$?
         #echo RET=$RET , LAST_RET=$LAST_RET
         if [ $RET -eq $LAST_RET ]; then     # same as from pevious time
@@ -99,8 +106,9 @@ alive() {
 #        echo $CTR
         TOTAL_COUNT=$((TOTAL_COUNT + 1))
         if [ $RET -eq 0 ]; then
+                RESPONSE_MS=$(echo "$RESPONSE" | grep ms | awk -F/ '{print $6}')
                 ALIVE_COUNT=$((ALIVE_COUNT + 1))
-                echo -e "$CTR $d $1 is alive ($ALIVE_COUNT / $TOTAL_COUNT)"
+                echo -e "$CTR $d $1 is alive, response $RESPONSE_MS ms ($ALIVE_COUNT / $TOTAL_COUNT)"
                 FAILED_COUNT=0
         else
                 FAILED_COUNT=$(( FAILED_COUNT + 1 ))

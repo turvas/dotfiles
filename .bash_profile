@@ -13,7 +13,7 @@ OS=`uname`
 if [ $OS != 'Darwin' ]; then    # Linux
         export PATH=~/.local/bin:$PATH
 else    # Mac
-        export PATH=~/.local/bin:/Users/kalev/Library/Python/3.8/bin:$PATH
+        export PATH=~/.local/bin:~/flutter/bin:~/Library/Python/3.8/bin:$PATH
         eval "$(/opt/homebrew/bin/brew shellenv)"
         ##
         # Your previous /Users/kalev/.bash_profile file was backed up as /Users/kalev/.bash_profile.macports-saved_2022-03-31_at_15:36:51

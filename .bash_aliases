@@ -20,6 +20,8 @@ fi
 alias la='ls -A'
 #alias l='ls -CF'
 
+alias vims='ansible-vault edit'
+
 alias reload='source ~/.bash_profile'
 alias grep='grep --color=auto'
 alias cdl='cd /opt/bytelife/logstack'

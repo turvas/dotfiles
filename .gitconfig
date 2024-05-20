@@ -66,3 +66,9 @@
 	diffFilter = diff-so-fancy --patch
 [credential]
 	helper = store
+[pull]
+	ff = only
+[http]
+	postBuffer = 157286400
+[init]
+	defaultBranch = main
