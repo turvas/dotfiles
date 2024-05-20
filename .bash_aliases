@@ -37,11 +37,11 @@ alias h='history'
 alias hg='history | grep -i $1'
 alias psef='ps -ef | head -1;  ps -ef | grep -v grep | grep --color=auto -i $1'
 #alias d='GLOBIGNORE=.; du -sch *; GLOBIGNORE=; shopt -u dotglob nullglob'
-alias duk='sudo du -hd1 / 2>/dev/null | sort -rh | head'
+alias duk='sudo du -xhd1 / 2>/dev/null | sort -rh | head'
 function dukk () { 
         if [ -z $1 ]; then DIR=/; else DIR=$1; fi; 
         if [ -z $2 ]; then DEPTH=1; else DEPTH=$2; fi; 
-        sudo du -hd$DEPTH $DIR 2>/dev/null | sort -rh | head;
+        sudo du -xhd$DEPTH $DIR 2>/dev/null | sort -rh | head;
 }
 function f() { find . -iname "*$1*" | grep $1; }
 alias eip='curl https://ifconfig.co'

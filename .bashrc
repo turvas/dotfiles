@@ -22,6 +22,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# fix for Fedora derivatives to handle ssh from MacOS, to avoid local related errors
+export LANGUAGE=en_GB.utf8
+export LC_ALL=en_GB.utf8
+export LC_CTYPE="utf8"
+export LANG=en_GB.utf8
+
 # For Java installed via Homebrew
 #export JAVA_HOME="$(/usr/libexec/java_home)"
 
@@ -168,7 +174,9 @@ if [ -z ${HOST_COLOR+x} ]; then # if variable is set
 fi
 
 function git_status_color {
-  local git_status="$(git status 2> /dev/null)"
+  if [ -z "$git_status" ]; then
+        local git_status="$(git status -uno 2> /dev/null)"
+  fi
 
   if [[ $git_status =~ "Changes not staged" ]] ; then
     echo $COLOR_RED_BOLD
@@ -188,7 +196,7 @@ function git_status_color {
 }
 
 function colored_git_branch {
-  local git_status="$(git status 2> /dev/null)"
+  git_status="$(git status -uno 2> /dev/null)"
   local on_branch="On branch ([^${IFS}]*)"
   local on_commit="HEAD detached at ([^${IFS}]*)"
 
