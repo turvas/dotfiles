@@ -4,6 +4,7 @@
 	excludesfile = /Users/kalev/.gitignore_global
   autocrlf = input
 [push]
+  autoSetupRemote = true
   default = simple
 [color]
   diff = auto
