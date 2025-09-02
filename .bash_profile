@@ -12,8 +12,9 @@ export EDITOR=vim
 OS=`uname`
 if [ $OS != 'Darwin' ]; then    # Linux
         export PATH=~/.local/bin:$PATH
+        ~/.dotfiles/quickcheck.sh
 else    # Mac
-        export PATH=~/.local/bin:~/flutter/bin:~/Library/Python/3.8/bin:$PATH
+        export PATH=~/.local/bin:~/flutter/bin:~/Library/Python/3.11/bin:~/Library/Python/3.8/bin:$PATH
         eval "$(/opt/homebrew/bin/brew shellenv)"
         ##
         # Your previous /Users/kalev/.bash_profile file was backed up as /Users/kalev/.bash_profile.macports-saved_2022-03-31_at_15:36:51
@@ -28,4 +29,7 @@ else    # Mac
         export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
         test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+        # python env
+        eval "$(pyenv init --path)"
+        eval "$(pyenv init -)"
 fi
