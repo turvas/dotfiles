@@ -12,7 +12,7 @@ export EDITOR=vim
 OS=`uname`
 if [ $OS != 'Darwin' ]; then    # Linux
         export PATH=~/.local/bin:$PATH
-        ~/.dotfiles/quickcheck.sh
+#        ~/.dotfiles/quickcheck.sh
 else    # Mac
         export PATH=~/.local/bin:~/flutter/bin:~/Library/Python/3.11/bin:~/Library/Python/3.8/bin:$PATH
         eval "$(/opt/homebrew/bin/brew shellenv)"
